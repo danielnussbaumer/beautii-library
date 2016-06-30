@@ -1,0 +1,188 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-family: $baseFont;
+  @mixin font-size 24;
+  line-height: 1.4;
+  font-weight: $fontWeightMedium;
+  color: $grey;
+}
+h1, h2 {
+  @mixin font-size 30;
+  letter-spacing: 0.1em;
+  font-weight: $fontWeightRegular;
+  text-transform: uppercase;
+  color: $teal;
+
+  .booking-site & {
+    font-weight: $fontWeightMedium;
+  }
+  &.h1-second {
+    text-transform: none;
+    font-weight: $fontWeightMedium;
+  }
+  &.h2-second {
+    font-weight: $fontWeightSemibold;
+  }
+}
+h3 {
+  @mixin font-size 36;
+  letter-spacing: 0.1em;
+  font-weight: $fontWeightRegular;
+  text-transform: uppercase;
+  color: $teal;
+}
+h4 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: $fontWeightSemibold;
+
+  &.subtitle {
+    @mixin font-size 18;
+    font-weight: $fontWeightRegular;
+  }
+}
+small,
+.small {
+  @mixin font-size 18;
+}
+a {
+  color: inherit;
+  @mixin link-underline-style;
+
+  &.heavy-link {
+    font-weight: $fontWeightSemibold;
+    text-transform: uppercase;
+    @mixin font-size 22;
+    color: $teal;
+    @mixin link-underline-style-off;
+  }
+  &.back-link {
+    @mixin font-size 20;
+    @mixin link-underline-style-off;
+  }
+}
+ol,
+ul {
+  padding-left: 1.2em;
+  margin: 1em 0;
+}
+strong {
+  font-weight: $fontWeightSemibold;
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 1em 0 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+::-webkit-input-placeholder {
+  color: $grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $grey;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $grey;
+}
+:-ms-input-placeholder {
+  color: $grey;
+}
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: $navyBlue;
+  padding-left: 20px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+textarea,
+select,
+input[type="submit"] {
+  font-family: $baseFont;
+  @mixin font-size 24;
+  line-height: 1.4;
+  font-weight: $fontWeightMedium;
+  color: $grey;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+textarea {
+  @mixin make-panel;
+  width: 100%;
+}
+
+/* Nav */
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: $fontWeightRegular;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $teal;
+      }
+    }
+  }
+}
+
+@media (--tablet) {
+  h1, h2 {
+    @mixin font-size 50;
+    font-weight: $fontWeightMedium;
+  }
+  h3 {
+    @mixin font-size 34;
+
+    &.h3-second {
+      @mixin font-size 24;
+    }
+    &.promoted {
+      @mixin font-size 48;
+      font-style: italic;
+      text-transform: none;
+      font-weight: $fontWeightLight;
+    }
+  }
+  h4 {
+    @mixin font-size 34;
+
+    .subtitle {
+      font-weight: $fontWeightRegular;
+      @mixin font-size 18;
+    }
+  }
+
+  /* Nav */
+  nav {
+    ul {
+      @mixin font-size 22;
+      text-transform: uppercase;
+    }
+  }
+}

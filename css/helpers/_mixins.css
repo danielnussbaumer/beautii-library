@@ -1,0 +1,28 @@
+@define-mixin font-size $fontSize {
+  $rem: calc($fontSize / 10);
+  font-size: calc($fontSize * 1px);
+  font-size: calc($rem * 1rem);
+}
+
+/* mixins so we can easily change the text underline style (e.g. using background images) later if we want */
+@define-mixin link-underline-style {
+  text-decoration: underline;
+}
+@define-mixin link-underline-style-off {
+  text-decoration: none;
+}
+
+@define-mixin make-panel {
+  border: 1px solid $paleBlue;
+  padding: 20px;
+  font-weight: $fontWeightMedium;
+  display: inline-block;
+}
+
+/* A mixin so it's easier to change the round button colours */
+@define-mixin round-btn-colour $colour {
+  border-color: $colour;
+   a {
+     color: $colour;
+   }
+}

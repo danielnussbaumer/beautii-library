@@ -1,0 +1,16 @@
+{
+  "name": "beautii-library",
+  "version": "0.1.0",
+  "description": "Global assets for Beautii sites",
+  "devDependencies": {
+    "cssnano": "^3.7.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "load-grunt-tasks": "^3.5.0",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-normalize": "^0.3.0",
+    "precss": "^1.4.0"
+  }
+}

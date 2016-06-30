@@ -1,0 +1,18 @@
+/* Colours */
+$teal: rgb(72, 138, 149);
+$paleBlue: rgb(175, 222, 230);
+$skyBlue: rgb(134, 206, 217);
+$sapphire: rgb(116, 175, 185);
+$navyBlue: rgb(17, 27, 52);
+$darkGrey: rgb(45, 48, 58);
+$lightGrey: rgb(241, 241, 241);
+$rose: rgb(217, 87, 84);
+$white: rgb(255, 255, 255);
+$grey: rgb(174, 174, 174);
+
+/* Fonts */
+$baseFont: "Graphik Web", "Graphik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontWeightLight: 100;
+$fontWeightRegular: 300;
+$fontWeightMedium: 400;
+$fontWeightSemibold: 600;
