@@ -29,16 +29,6 @@ input[type="submit"] {
     @mixin font-size 22;
     font-weight: $fontWeightMedium;
   }
-  &.btn-outline-bold {
-    border-radius: 0.3em;
-    color: $teal;
-    background: $white;
-    border: 1px solid $teal;
-    padding: 0.3em 0.8em 0.2em;
-    text-transform: uppercase;
-    @mixin font-size 18;
-    font-weight: $fontWeightSemibold;
-  }
   &.btn-urgent {
     border-radius: 0.3em;
     background: $navyBlue;
@@ -48,25 +38,35 @@ input[type="submit"] {
     font-weight: $fontWeightMedium;
     text-transform: uppercase;
   }
-  &.btn-ghost {
+}
+.btn-outline-bold {
+  border-radius: 0.3em;
+  color: $teal;
+  background: $white;
+  border: 1px solid $teal;
+  padding: 0.3em 0.8em 0.2em;
+  text-transform: uppercase;
+  @mixin font-size 18;
+  font-weight: $fontWeightSemibold;
+}
+.btn-ghost { 
+  @mixin make-panel;
+  background: $white;
+  color: $teal;
+  min-width: 590px;
+  text-align: left;
+
+  &.btn-ghost-large {
     @mixin make-panel;
     background: $white;
     color: $teal;
     min-width: 590px;
-    text-align: left;
-
-    &.btn-ghost-large {
-      @mixin make-panel;
-      background: $white;
-      color: $teal;
-      min-width: 590px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-    &.btn-ghost-centre {
-      text-align: center;
-    }
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
+}
+.btn-ghost-centre {
+  text-align: center;
 }
 .btn-round {
   width: 125px;
