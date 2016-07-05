@@ -20,7 +20,9 @@ body {
 .sg-swatch {
   width: 50px;
   height: 50px;
+  cursor: pointer;
   display: inline-block;
+  position: relative;
 
   &.sg-swatch-01 {
     background: $teal;
@@ -45,6 +47,25 @@ body {
   }
   &.sg-swatch-08 {
     background: $rose;
+  }
+  .sg-swatch__color {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 150px;
+    background: $white;
+    padding: 10px;
+    color: $rose;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    @mixin font-size 14;
+    z-index: 30;
+    cursor: auto;
+  }
+  &:hover {
+    .sg-swatch__color {
+      display: block;
+    }
   }
 }
 .sg-selector {
