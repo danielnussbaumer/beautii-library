@@ -27,7 +27,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: 'css/style.css',
-                dest: 'css/style.min.css'
+                dest: 'style.min.css'
             }
         }
     });
