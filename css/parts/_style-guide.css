@@ -61,6 +61,7 @@ body {
     @mixin font-size 14;
     z-index: 30;
     cursor: auto;
+    font-weight: $fontWeightLight;
   }
   &:hover {
     .sg-swatch__color {

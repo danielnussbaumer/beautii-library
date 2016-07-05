@@ -3,11 +3,18 @@
 @import "helpers/mixins";
 @import "helpers/variables";
 
+/* svg */
+@import "svg/svg";
+.no-svg {
+  @import "svg/svg-fallback";
+}
+
 /* base */
 @import "base/fonts";
 @import "base/typography";
 
 /* parts */
+@import "parts/icons";
 @import "parts/elements";
 @import "parts/style-guide";
 @import "parts/buttons";
