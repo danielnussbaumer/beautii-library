@@ -3,13 +3,13 @@ html {
 }
 body {
   font-family: $baseFont;
-  @mixin font-size 24;
+  @mixin font-size 12;
   line-height: 1.4;
   font-weight: $fontWeightMedium;
   color: $grey;
 }
 h1, h2 {
-  @mixin font-size 30;
+  @mixin font-size 15;
   letter-spacing: 0.1em;
   font-weight: $fontWeightRegular;
   text-transform: uppercase;
@@ -27,7 +27,7 @@ h1, h2 {
   }
 }
 h3 {
-  @mixin font-size 36;
+  @mixin font-size 18;
   letter-spacing: 0.1em;
   font-weight: $fontWeightRegular;
   text-transform: uppercase;
@@ -39,13 +39,13 @@ h4 {
   font-weight: $fontWeightSemibold;
 
   &.subtitle {
-    @mixin font-size 18;
+    @mixin font-size 9;
     font-weight: $fontWeightRegular;
   }
 }
 small,
 .small {
-  @mixin font-size 18;
+  @mixin font-size 9;
 }
 a {
   color: inherit;
@@ -54,12 +54,12 @@ a {
   &.heavy-link {
     font-weight: $fontWeightSemibold;
     text-transform: uppercase;
-    @mixin font-size 22;
+    @mixin font-size 11;
     color: $teal;
     @mixin link-underline-style-off;
   }
   &.back-link {
-    @mixin font-size 20;
+    @mixin font-size 10;
     @mixin link-underline-style-off;
   }
 }
@@ -115,7 +115,7 @@ textarea,
 select,
 input[type="submit"] {
   font-family: $baseFont;
-  @mixin font-size 24;
+  @mixin font-size 12;
   line-height: 1.4;
   font-weight: $fontWeightMedium;
   color: $grey;
@@ -153,35 +153,35 @@ nav {
 
 @media (--tablet) {
   h1, h2 {
-    @mixin font-size 50;
+    @mixin font-size 25;
     font-weight: $fontWeightMedium;
   }
   h3 {
-    @mixin font-size 34;
+    @mixin font-size 17;
 
     &.h3-second {
-      @mixin font-size 24;
+      @mixin font-size 12;
     }
     &.promoted {
-      @mixin font-size 48;
+      @mixin font-size 24;
       font-style: italic;
       text-transform: none;
       font-weight: $fontWeightLight;
     }
   }
   h4 {
-    @mixin font-size 34;
+    @mixin font-size 17;
 
     .subtitle {
       font-weight: $fontWeightRegular;
-      @mixin font-size 18;
+      @mixin font-size 9;
     }
   }
 
   /* Nav */
   nav {
     ul {
-      @mixin font-size 22;
+      @mixin font-size 11;
       text-transform: uppercase;
     }
   }
