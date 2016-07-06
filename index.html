@@ -2,6 +2,7 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beautii Style Guide</title>
     <link rel="stylesheet" href="style.min.css">
     <link rel="stylesheet" href="fonts/graphik/graphik-stylesheet.css">
@@ -122,56 +123,49 @@
 </div>
 <div class="sg-section">
     <h2 class="sg-title">Buttons</h2>
-    <fieldset>
-        <a href="#" class="btn">Default Button</a> <span class="sg-selector">a.btn</span>
-    </fieldset>
-    <fieldset>
-        <a href="#" class="btn btn-bold">Bold Button</a> <span class="sg-selector">a.btn.btn-bold</span>
-    </fieldset>
-    <fieldset>
-        <a href="#" class="btn btn-outline">Outline Button</a> <span class="sg-selector">a.btn.btn-outline</span>
-    </fieldset>
-    <fieldset>
+    <div class="sg-set">
+        <a href="#" class="btn-default">Default Button</a> <span class="sg-selector">a.btn-default</span>
+    </div>
+    <div class="sg-set">
+        <a href="#" class="btn-bold">Bold Button</a> <span class="sg-selector">a.btn.btn-bold</span>
+    </div>
+    <div class="sg-set">
+        <a href="#" class="btn-outline">Outline Button</a> <span class="sg-selector">a.btn.btn-outline</span>
+    </div>
+    <div class="sg-set">
         <a href="#" class="btn btn-outline-bold">Outline Button Bold</a> <span class="sg-selector">a.btn.btn-outline-bold</span>
-    </fieldset>
-    <fieldset>
-        <a href="#" class="btn btn-urgent">Urgent Button</a> <span class="sg-selector">a.btn.btn-urgent</span>
-    </fieldset>
-</div>
-<div class="sg-section">
-    <h2 class="sg-title">Ghost Buttons</h2>
-    <fieldset>
-        <a href="#" class="btn btn-ghost">Ghost Button</a> <span class="sg-selector">a.btn.btn-ghost</span>
-    </fieldset>
-    <fieldset>
-        <a href="#" class="btn btn-ghost btn-ghost-large">Ghost Button Large</a>
-    </fieldset>
-    <fieldset>
-        <a href="#" class="btn btn-ghost btn-ghost-centre">Ghost Button Centre</a> <span class="sg-selector">a.btn.btn-ghost.btn-ghost-centre</span>
-    </fieldset>
+    </div>
+    <div class="sg-set">
+        <a href="#" class="btn-urgent">Urgent Button</a> <span class="sg-selector">a.btn.btn-urgent</span>
+    </div>
 </div>
 <div class="sg-section">
     <h2 class="sg-title">Round Buttons</h2>
-    <fieldset>
+    <div class="sg-set">
         <div class="btn-round">
             <a href="#">Round Button</a>
         </div>
         <span class="sg-selector">div.btn-round a</span>
-    </fieldset>
-    <fieldset>
+    </div>
+    <div class="sg-set">
         <div class="btn-round btn-round-alt-colour">
             <a href="#">Round Button</a>
         </div>
         <span class="sg-selector">div.btn-round a (colour set with mixin)</span>
-    </fieldset>
+    </div>
 </div>
 <div class="sg-section">
     <h2 class="sg-title">Panels</h2>
-    <!--
-    TODO: I figure I'll let you sort out the details of this abe
-    as other than the outline colour and padding, which is covered by
-    .panel, the interior layout's only used on the booking site
-    -->
+    <p class="sg-comment">These can also be used as buttons</p>
+    <div class="sg-set">
+        <a href="#" class="panel">Panel</a> <span class="sg-selector">a.panel</span>
+    </div>
+    <div class="sg-set">
+        <a href="#" class="panel panel-large">Panel Large</a> <span class="sg-selector">a.panel.panel-large</span>
+    </div>
+    <div class="sg-set">
+        <a href="#" class="panel panel-centre">Panel Centre</a> <span class="sg-selector">a.panel.panel-centre</span>
+    </div>
 </div>
 <div class="sg-section">
     <h2 class="sg-title">Fields</h2>

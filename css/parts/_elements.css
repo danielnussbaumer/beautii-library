@@ -1,3 +1,10 @@
 .panel {
   @mixin make-panel;
 }
+.panel-large {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.panel-centre {
+  text-align: center;
+}

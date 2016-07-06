@@ -16,3 +16,11 @@ $fontWeightLight: 100;
 $fontWeightRegular: 300;
 $fontWeightMedium: 400;
 $fontWeightSemibold: 600;
+
+/* Buttons */
+$btnBorderRadius: 0.3em;
+$btnBorderWidth: 1px;
+$btnPaddingLarge: 0.5em 0.8em 0.4em;
+$btnPaddingTight: 0.3em 0.8em 0.2em;
+$btnDefaultWeight: $fontWeightMedium;
+$btnDefaultFontSize: 11;

@@ -14,7 +14,11 @@ body {
     margin-bottom: 20px;
   }
 }
-.sg-title {
+.sg-set {
+  margin: 1em 0;
+}
+.sg-title,
+.sg-comment {
   color: $rose !important;
 }
 .sg-swatch {
@@ -70,11 +74,12 @@ body {
   }
 }
 .sg-selector {
-  font-size: 14px !important;
+  font-size: 9px !important;
   color: $rose !important;
   font-weight: $fontWeightLight !important;
   text-transform: none !important;
   letter-spacing: 2px !important;
+  white-space: nowrap;
 
   &:before{
     content: '{';

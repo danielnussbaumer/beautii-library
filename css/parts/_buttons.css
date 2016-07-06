@@ -1,81 +1,77 @@
+.btn-default,
 button,
-.btn,
 input[type="submit"] {
   border: 0;
   background: $teal;
   color: $white;
-  @mixin font-size 20;
+  @mixin font-size $btnDefaultFontSize;
   font-weight: $fontWeightRegular;
-  padding: 0.3em 0.8em 0.3em;
-  min-width: 190px;
+  padding: $btnPaddingLarge;
   @mixin link-underline-style-off;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-
-  &.btn-bold {
-    border-radius: 0.3em;
-    text-transform: uppercase;
-    font-weight: $fontWeightSemibold;
-    color: $navyBlue;
-    @mixin font-size 22;
-  }
-  &.btn-outline {
-    border-radius: 0.3em;
-    color: $teal;
-    background: $white;
-    border: 1px solid $teal;
-    padding: 0.3em 0.8em 0.2em;
-    @mixin font-size 22;
-    font-weight: $fontWeightMedium;
-  }
-  &.btn-urgent {
-    border-radius: 0.3em;
-    background: $navyBlue;
-    color: $teal;
-    border: 1px solid $teal;
-    @mixin font-size 22;
-    font-weight: $fontWeightMedium;
-    text-transform: uppercase;
-  }
+  border-radius: $btnBorderRadius;
+}
+.btn-bold {
+  @mixin font-size $btnDefaultFontSize;
+  @mixin link-underline-style-off;
+  display: inline-block;
+  text-align: center;
+  border-radius: $btnBorderRadius;
+  border: 0;
+  padding: $btnPaddingTight;
+  color: $navyBlue;
+  background: $teal;
+  font-weight: $fontWeightSemibold;
+  text-transform: uppercase;
+}
+.btn-outline {
+  @mixin font-size $btnDefaultFontSize;
+  @mixin link-underline-style-off;
+  display: inline-block;
+  text-align: center;
+  border-radius: $btnBorderRadius;
+  border: $btnBorderWidth solid $teal;
+  padding: $btnPaddingTight;
+  color: $teal;
+  background: $white;
+  font-weight: $btnDefaultWeight;
 }
 .btn-outline-bold {
-  border-radius: 0.3em;
-  color: $teal;
-  background: $white;
-  border: 1px solid $teal;
-  padding: 0.3em 0.8em 0.2em;
-  text-transform: uppercase;
-  @mixin font-size 18;
-  font-weight: $fontWeightSemibold;
-}
-.btn-ghost { 
-  @mixin make-panel;
-  background: $white;
-  color: $teal;
-  min-width: 590px;
-  text-align: left;
-
-  &.btn-ghost-large {
-    @mixin make-panel;
-    background: $white;
-    color: $teal;
-    min-width: 590px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-.btn-ghost-centre {
+  @mixin font-size $btnDefaultFontSize;
+  @mixin link-underline-style-off;
+  display: inline-block;
   text-align: center;
+  border-radius: $btnBorderRadius;
+  border: $btnBorderWidth solid $teal;
+  padding: $btnPaddingTight;
+  color: $teal;
+  background: $white;
+  font-weight: $fontWeightSemibold;
+  text-transform: uppercase;
+}
+.btn-urgent {
+  @mixin font-size $btnDefaultFontSize;
+  @mixin link-underline-style-off;
+  display: inline-block;
+  text-align: center;
+  border-radius: $btnBorderRadius;
+  border: $btnBorderWidth solid $teal;
+  padding: $btnPaddingLarge;
+  background: $navyBlue;
+  color: $teal;
+  font-weight: $btnDefaultWeight;
+  text-transform: uppercase;
 }
 .btn-round {
-  width: 125px;
-  height: 125px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 2px solid $teal;
   display: table;
   text-align: center;
-  @mixin font-size 22;
+  @mixin font-size $btnDefaultFontSize;
   font-weight: $fontWeightSemibold;
   text-transform: uppercase;
 

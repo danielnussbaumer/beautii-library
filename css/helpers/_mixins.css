@@ -17,6 +17,11 @@
   padding: 20px;
   font-weight: $fontWeightMedium;
   display: inline-block;
+  background: $white;
+  color: $teal;
+  width: 300px;
+  max-width: 100%;
+  @mixin link-underline-style-off;
 }
 
 /* A mixin so it's easier to change the round button colours */

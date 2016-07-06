@@ -6,8 +6,8 @@ module.exports = function(grunt) {
                 tasks: ['postcss'],
                 options: {
                     spawn: false,
-                    interrupt: true,
-                    livereload: true
+                    //livereload: true, -> not helpful when it's a submodule
+                    interrupt: true
                 }
             }
         },
