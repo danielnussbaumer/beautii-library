@@ -1,7 +1,11 @@
 .icon {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  background-size: cover;
-  background-position: center;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  overflow: hidden;
+  text-indent: -9999em;
+}
+button.icon {
+  border: 0;
+  padding: 0;
 }

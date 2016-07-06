@@ -93,7 +93,12 @@ module.exports = function(grunt) {
                     datasvgcss: '_svg.css',
                     datapngcss: '_svg-png.css',
                     urlpngcss: '_svg-fallback.css',
-                    loadersnippet: '../../js/vendor/grunticon.loader.js'
+                    loadersnippet: '../../js/vendor/grunticon.loader.js',
+                    colors: {
+                        iconAltCol01: "#488A95",
+                        iconAltCol02: "#FFFFFF",
+                        iconAltCol03: "#AFDEE6"
+                    }
                 }
             }
         },
@@ -104,10 +109,13 @@ module.exports = function(grunt) {
                 dest: 'js/vendor/grunticon.loader.js'
             }
         },
-        clean: ['css/svg/preview.html', 'css/svg/grunticon.loader.js', 'css/svg/_svg-png.css']
+        clean: {
+            preSvgOps: ['img/svg/optimised/*.svg', 'img/svg/fallbacks/*.svg'],
+            postGrunticon: ['css/svg/preview.html', 'css/svg/grunticon.loader.js', 'css/svg/_svg-png.css']
+        }
     });
 
     require('load-grunt-tasks')(grunt);
     grunt.registerTask('default', [ 'modernizr', 'uglify', 'watch', 'postcss' ]);
-    grunt.registerTask('svg', [ 'svgmin', 'grunticon', 'copy', 'clean' ]);
+    grunt.registerTask('svg', [ 'clean:preSvgOps', 'svgmin', 'grunticon', 'copy', 'clean:postGrunticon' ]);
 };

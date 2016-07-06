@@ -1,5 +1,4 @@
 .btn-default,
-button,
 input[type="submit"] {
   border: 0;
   background: $teal;
@@ -24,6 +23,7 @@ input[type="submit"] {
   color: $navyBlue;
   background: $teal;
   font-weight: $fontWeightSemibold;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .btn-outline {
@@ -49,6 +49,7 @@ input[type="submit"] {
   color: $teal;
   background: $white;
   font-weight: $fontWeightSemibold;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .btn-urgent {
@@ -69,19 +70,12 @@ input[type="submit"] {
   height: 70px;
   border-radius: 50%;
   border: 2px solid $teal;
-  display: table;
   text-align: center;
   @mixin font-size $btnDefaultFontSize;
   font-weight: $fontWeightSemibold;
   text-transform: uppercase;
-
-  a {
-    vertical-align: middle;
-    display: table-cell;
-    @mixin link-underline-style-off;
-    color: $teal;
-  }
-  &.btn-round-alt-colour {
-    @mixin round-btn-colour $grey;
-  }
+  @mixin link-underline-style-off;
+  color: $teal;
+  display: flex;
+  align-items: center;
 }
