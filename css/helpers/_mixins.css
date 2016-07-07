@@ -58,28 +58,43 @@
 
 @define-mixin double-curved-edge $bgColVal, $borderColVal, $side, $size {
   position: relative;
-  $height: calc($size - 4px);
 
-  &:before {
+  &:after {
     content: '';
     display: block;
     background-color: $bgColVal;
-    border-color: $borderColVal;
-    border-style: solid;
     width: 100%;
-    height: $height;
+    height: $size;
     position: absolute;
     left: 0;
 
     @if $(side) == 'top' {
       border-radius: 100% 100% 0 0;
-      border-width: 4px 0 0;
       top: -$size;
     }
     @if $(side) == 'bottom' {
       border-radius: 0 0 100% 100%;
-      border-width: 0 0 4px;
       bottom: -$size;
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    background-color: $borderColVal;
+    width: 100%;
+    height: $size;
+    position: absolute;
+    left: 0;
+
+    @if $(side) == 'top' {
+      border-radius: 100% 100% 0 0;
+      top: -$size;
+      margin-top: -4px;
+    }
+    @if $(side) == 'bottom' {
+      border-radius: 0 0 100% 100%;
+      bottom: -$size;
+      margin-bottom: -4px;
     }
   }
 }

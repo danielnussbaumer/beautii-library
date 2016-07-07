@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         },
         postcss: {
             options: {
-            map: {
+                map: {
                     inline: false
                 },
                 processors: [
@@ -62,7 +62,16 @@ module.exports = function(grunt) {
             },
             styleGuide: {
                 src: 'style-guide.css',
-                dest: 'style-guide.min.css'
+                dest: 'style-guide.min.css',
+                options: {
+                    map: false,
+                    processors: [
+                        require('precss')(), // processes sass
+                        require('postcss-cssnext')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1, IE 9'}), // processes future-proof css
+                        require('postcss-discard-comments'), // remove comments
+                        require('cssnano') // minimise css
+                    ]
+                }
             }
         },
         svg_sprite: {
@@ -70,12 +79,12 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'img/svg/raw',
                 src: ['**/*.svg'],
-                dest: 'img/svg'
+                dest: ''
             },
             options: {
                 mode: {
                     symbol: {
-                        dest: '',
+                        dest: 'img/svg',
                         sprite: 'sprite.svg'
                     }
                 },
@@ -92,6 +101,6 @@ module.exports = function(grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', [ 'modernizr', 'uglify', 'watch', 'postcss' ]);
+    grunt.registerTask('default', [ 'modernizr', 'uglify', 'postcss', 'watch' ]);
     grunt.registerTask('svg', [ 'clean:preSvgOps', 'svg_sprite']);
 };
