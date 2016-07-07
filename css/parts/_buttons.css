@@ -35,7 +35,6 @@ input[type="submit"] {
   border: $btnBorderWidth solid $teal;
   padding: $btnPaddingTight;
   color: $teal;
-  background: $white;
   font-weight: $btnDefaultWeight;
 }
 .btn-outline-bold {
@@ -47,7 +46,6 @@ input[type="submit"] {
   border: $btnBorderWidth solid $teal;
   padding: $btnPaddingTight;
   color: $teal;
-  background: $white;
   font-weight: $fontWeightSemibold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -79,4 +77,34 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   padding: 10px;
+}
+.lozenge {
+  background: $paleBlue;
+  border-radius: $btnBorderRadius;
+  color: $teal;
+  text-transform: uppercase;
+  padding: 0.3em 0.8em;
+  font-weight: $fontWeightSemibold;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  span {
+    width: 33.3333%;
+  }
+  .lozenge__title {
+    text-align: left;
+  }
+  .lozenge__cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    svg {
+      fill: $teal;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+    }
+  }
 }

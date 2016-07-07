@@ -22,8 +22,10 @@ h1, h2 {
     text-transform: none;
     font-weight: $fontWeightMedium;
   }
-  &.h2-second {
+  &.product-title {
     font-weight: $fontWeightSemibold;
+    text-shadow: $textShadowValue;
+    @mixin font-size 17;
   }
 }
 h3 {
