@@ -43,6 +43,11 @@ h4 {
     font-weight: $fontWeightRegular;
   }
 }
+.promoted {
+  font-style: italic;
+  text-transform: none;
+  font-weight: $fontWeightLight;
+}
 small,
 .small {
   @mixin font-size 9;
@@ -161,12 +166,6 @@ nav {
 
     &.h3-second {
       @mixin font-size 12;
-    }
-    &.promoted {
-      @mixin font-size 24;
-      font-style: italic;
-      text-transform: none;
-      font-weight: $fontWeightLight;
     }
   }
   h4 {

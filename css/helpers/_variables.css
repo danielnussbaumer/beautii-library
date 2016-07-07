@@ -1,14 +1,25 @@
 /* Colours */
-$teal: rgb(72, 138, 149);
-$paleBlue: rgb(175, 222, 230);
-$skyBlue: rgb(134, 206, 217);
-$sapphire: rgb(116, 175, 185);
-$navyBlue: rgb(17, 27, 52);
-$darkGrey: rgb(45, 48, 58);
-$lightGrey: rgb(241, 241, 241);
-$rose: rgb(217, 87, 84);
-$white: rgb(255, 255, 255);
-$grey: rgb(174, 174, 174);
+$tealRgbVal: 72, 138, 149;
+$paleBlueRgbVal: 175, 222, 230;
+$skyBlueRgbVal: 134, 206, 217;
+$sapphireRgbVal: 116, 175, 185;
+$navyBlueRgbVal: 17, 27, 52;
+$darkGreyRgbVal: 45, 48, 58;
+$lightGreyRgbVal: 241, 241, 241;
+$roseRgbVal: 217, 87, 84;
+$whiteRgbVal: 255, 255, 255;
+$greyRgbVal: 174, 174, 174;
+
+$teal: rgb($tealRgbVal);
+$paleBlue: rgb($paleBlueRgbVal);
+$skyBlue: rgb($skyBlueRgbVal);
+$sapphire: rgb($sapphireRgbVal);
+$navyBlue: rgb($navyBlueRgbVal);
+$darkGrey: rgb($darkGreyRgbVal);
+$lightGrey: rgb($lightGreyRgbVal);
+$rose: rgb($roseRgbVal);
+$white: rgb($whiteRgbVal);
+$grey: rgb($greyRgbVal);
 
 /* Fonts */
 $baseFont: "Graphik Web", "Graphik", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -24,3 +35,6 @@ $btnPaddingLarge: 0.5em 0.8em 0.4em;
 $btnPaddingTight: 0.3em 0.8em 0.2em;
 $btnDefaultWeight: $fontWeightMedium;
 $btnDefaultFontSize: 11;
+
+/* Misc */
+$textShadowValue: 1px 1px 2px rgba(0, 0, 0, 0.17);

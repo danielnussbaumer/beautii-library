@@ -2,11 +2,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
             styles: {
-                files: ['css/**/*', 'index.html'],
+                files: ['css/**/*', 'index.html', 'style-guide.css'],
                 tasks: ['postcss'],
                 options: {
                     spawn: false,
-                    //livereload: true, -> not helpful when it's a submodule
                     interrupt: true
                 }
             }
@@ -37,7 +36,7 @@ module.exports = function(grunt) {
                 files: {
                     'script.min.js':
                         [
-                            'js/vendor/grunticon.loadermodernir .js',
+                            'js/vendor/svg4everybody.js',
                             'js/vendor/modernizr.js',
                             'js/script.js'
                         ]
@@ -46,7 +45,7 @@ module.exports = function(grunt) {
         },
         postcss: {
             options: {
-                map: {
+            map: {
                     inline: false
                 },
                 processors: [
@@ -60,62 +59,39 @@ module.exports = function(grunt) {
             dist: {
                 src: 'css/style.css',
                 dest: 'style.min.css'
+            },
+            styleGuide: {
+                src: 'style-guide.css',
+                dest: 'style-guide.min.css'
             }
         },
-        svgmin: {
+        svg_sprite: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'img/svg/raw',
-                    src: ['*.svg'],
-                    dest: 'img/svg/optimised'
-                }]
+                expand: true,
+                cwd: 'img/svg/raw',
+                src: ['**/*.svg'],
+                dest: 'img/svg'
             },
             options: {
-                plugins: [
-                    { removeViewBox: false },               // don't remove the viewbox attribute from the SVG
-                    { removeEmptyAttrs: false }             // don't remove Empty Attributes from the SVG
-                ]
-            }
-        },
-        grunticon: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'img/svg/optimised',
-                    src: ['*.svg'],
-                    dest: 'css/svg'
-                }],
-                options: {
-                    cssprefix: '.icon--',
-                    pngpath: 'img/svg/fallbacks',
-                    pngfolder: '../../img/svg/fallbacks',
-                    datasvgcss: '_svg.css',
-                    datapngcss: '_svg-png.css',
-                    urlpngcss: '_svg-fallback.css',
-                    loadersnippet: '../../js/vendor/grunticon.loader.js',
-                    colors: {
-                        iconAltCol01: "#488A95",
-                        iconAltCol02: "#FFFFFF",
-                        iconAltCol03: "#AFDEE6"
+                mode: {
+                    symbol: {
+                        dest: '',
+                        sprite: 'sprite.svg'
+                    }
+                },
+                svg: {
+                    rootAttributes: {
+                        xmlns: 'http://www.w3.org/2000/svg'
                     }
                 }
             }
         },
-        // grunticon doesn't give us the control over which files are created and where that I want
-        copy: {
-            dist: {
-                src: 'css/svg/grunticon.loader.js',
-                dest: 'js/vendor/grunticon.loader.js'
-            }
-        },
         clean: {
-            preSvgOps: ['img/svg/optimised/*.svg', 'img/svg/fallbacks/*.svg'],
-            postGrunticon: ['css/svg/preview.html', 'css/svg/grunticon.loader.js', 'css/svg/_svg-png.css']
+            preSvgOps: ['img/svg/fallbacks/*.png']
         }
     });
 
     require('load-grunt-tasks')(grunt);
     grunt.registerTask('default', [ 'modernizr', 'uglify', 'watch', 'postcss' ]);
-    grunt.registerTask('svg', [ 'clean:preSvgOps', 'svgmin', 'grunticon', 'copy', 'clean:postGrunticon' ]);
+    grunt.registerTask('svg', [ 'clean:preSvgOps', 'svg_sprite']);
 };

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beautii Style Guide</title>
     <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style-guide.min.css">
     <link rel="stylesheet" href="fonts/graphik/graphik-stylesheet.css">
     <script type="text/javascript" src="script.min.js"></script>
 </head>
@@ -34,9 +35,11 @@
     <h4 class="subtitle">Heading 4 Subtitle <span class="sg-selector">h4.subtitle</span></h4>
     <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Integer aliquam
         <em>maximus accumsan</em>. Vestibulum pretium, nisl ut maximus ultricies, purus mi dignissim dolor, non tincidunt nibh nisi in enim.
-        <a href="#">Mauris molestie lectus tellus</a>, semper porta odio aliquam vitae. Cras sit amet nulla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae purus orci. Integer condimentum vitae nibh vitae hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis dictum tortor, vitae lobortis massa. Vivamus convallis odio in maximus sollicitudin. Cras quis egestas lacus. <span class="sg-selector">p</span>
+        <a href="#">Mauris molestie lectus tellus</a>, semper porta odio aliquam vitae. Cras sit amet nulla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae purus orci. Integer condimentum vitae nibh vitae hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis dictum tortor, vitae lobortis massa. Vivamus convallis odio in maximus sollicitudin. Cras quis egestas lacus.
+        <span class="sg-selector">p</span>
     </p>
-    <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam maximus accumsan. Vestibulum pretium, nisl ut maximus ultricies, purus mi dignissim dolor, non tincidunt nibh nisi in enim. Mauris molestie lectus tellus, semper porta odio aliquam vitae. Cras sit amet nulla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae purus orci. Integer condimentum vitae nibh vitae hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis dictum tortor, vitae lobortis massa. Vivamus convallis odio in maximus sollicitudin. Cras quis egestas lacus. <span class="sg-selector">p.small</span></p>
+    <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam maximus accumsan. Vestibulum pretium, nisl ut maximus ultricies, purus mi dignissim dolor, non tincidunt nibh nisi in enim. Mauris molestie lectus tellus, semper porta odio aliquam vitae. Cras sit amet nulla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae purus orci. Integer condimentum vitae nibh vitae hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis dictum tortor, vitae lobortis massa. Vivamus convallis odio in maximus sollicitudin. Cras quis egestas lacus.
+        <span class="sg-selector">p.small</span></p>
     <a href="#" class="heavy-link">Heavy link <span class="sg-selector">a.heavy-link</span></a>
     <ul>
         <li>List item 1 <span class="sg-selector">ul li</span></li>
@@ -52,7 +55,8 @@
         <li>List item 4</li>
         <li>List item 5</li>
     </ol>
-    <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam maximus accumsan. Vestibulum pretium, nisl ut maximus ultricies, purus mi dignissim dolor, non tincidunt nibh nisi in enim. Mauris molestie lectus tellus, semper porta odio aliquam vitae. <span class="sg-selector">blockquote</span></blockquote>
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam maximus accumsan. Vestibulum pretium, nisl ut maximus ultricies, purus mi dignissim dolor, non tincidunt nibh nisi in enim. Mauris molestie lectus tellus, semper porta odio aliquam vitae.
+        <span class="sg-selector">blockquote</span></blockquote>
 </div>
 <div class="sg-section booking-site">
     <h2 class="sg-title">Booking Styles</h2>
@@ -74,52 +78,126 @@
     <h2 class="sg-title">SVG Icons</h2>
     <!--TODO: There are some icons missing here.-->
     <h3 class="sg-title">Navigation</h3>
-    <span class="icon icon--menu"></span>
-    <span class="icon icon--remove-item"></span>
-    <span class="icon icon--right-arrow"></span>
-    <span class="icon icon--next-button"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#menu"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#remove-item"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#right-arrow"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#next-button"/>
+    </svg>
     <h3 class="sg-title">Booking Icons</h3>
-    <span class="icon icon--user-icon"></span>
-    <span class="icon icon--settings"></span>
-    <span class="icon icon--password"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#user-icon"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#settings"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#password"/>
+    </svg>
     <br/>
     <br/>
-    <span class="icon icon--close"></span>
-    <span class="icon icon--plus"></span>
-    <span class="icon icon--alert"></span>
-    <span class="icon icon--confirmation"></span>
-    <span class="icon icon--email"></span>
-    <span class="icon icon--edit"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#close"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#plus"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#alert"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#confirmation"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#email"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#edit"/>
+    </svg>
     <br/>
     <br/>
-    <span class="icon icon--amex"></span>
-    <span class="icon icon--mastercard"></span>
-    <span class="icon icon--visa"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#amex"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#mastercard"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#visa"/>
+    </svg>
     <h3 class="sg-title">Button Icons</h3>
-    <span class="icon icon--hotel"></span>
-    <span class="icon icon--plus-select"></span>
-    <span class="icon icon--call"></span>
-    <span class="icon icon--work"></span>
-    <span class="icon icon--address"></span>
-    <span class="icon icon--calendar"></span>
-    <span class="icon icon--home"></span>
-    <span class="icon icon--payment-method"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#hotel"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#plus-select"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#call"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#work"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#address"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#calendar"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#home"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#payment-method"/>
+    </svg>
     <h3 class="sg-title">Social</h3>
-    <span class="icon icon--pinterest"></span>
-    <span class="icon icon--instagram"></span>
-    <span class="icon icon--facebook"></span>
-    <span class="icon icon--twitter"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#pinterest"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#instagram"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#facebook"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#twitter"/>
+    </svg>
     <h3 class="sg-title">Brand Icons</h3>
-    <span class="icon icon--date-time"></span>
-    <span class="icon icon--star"></span>
-    <span class="icon icon--cost"></span>
-    <span class="icon icon--timer"></span>
-    <span class="icon icon--qualified-team"></span>
-    <span class="icon icon--brand-tag"></span>
-    <span class="icon icon--door"></span>
-    <span class="icon icon--camera"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#date-time"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#star"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#cost"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#timer"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#qualified-team"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#brand-tag"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#door"/>
+    </svg>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#camera"/>
+    </svg>
     <h3 class="sg-title">Other Icons?</h3>
-    <span class="icon icon--checkbox"></span>
+    <svg role="img" title="Beautii" class="icon">
+        <use xlink:href="img/svg/sprite.svg#checkbox"/>
+    </svg>
 </div>
 <div class="sg-section">
     <h2 class="sg-title">Buttons</h2>
@@ -133,7 +211,8 @@
         <a href="#" class="btn-outline">Outline Button</a> <span class="sg-selector">a.btn.btn-outline</span>
     </div>
     <div class="sg-set">
-        <a href="#" class="btn btn-outline-bold">Outline Button Bold</a> <span class="sg-selector">a.btn.btn-outline-bold</span>
+        <a href="#" class="btn btn-outline-bold">Outline Button Bold</a>
+        <span class="sg-selector">a.btn.btn-outline-bold</span>
     </div>
     <div class="sg-set">
         <a href="#" class="btn-urgent">Urgent Button</a> <span class="sg-selector">a.btn.btn-urgent</span>
@@ -184,7 +263,8 @@
             <input type="submit" value="Submit"> <span class="sg-selector">input[type="submit"]</span>
         </fieldset>
         <fieldset>
-            <button>Default button</button> <span class="sg-selector">button</span>
+            <button>Default button</button>
+            <span class="sg-selector">button</span>
         </fieldset>
     </form>
 </div>
