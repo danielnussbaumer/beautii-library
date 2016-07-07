@@ -44,13 +44,42 @@
     height: 10px;
     position: absolute;
     left: 0;
-    top: -10px;
 
     @if $(side) == 'top' {
       border-radius: 100% 100% 0 0;
+      top: -10px;
     }
     @if $(side) == 'bottom' {
       border-radius: 0 0 100% 100%;
+      bottom: -10px;
+    }
+  }
+}
+
+@define-mixin double-curved-edge $bgColVal, $borderColVal, $side, $size {
+  position: relative;
+  $height: calc($size - 4px);
+
+  &:before {
+    content: '';
+    display: block;
+    background-color: $bgColVal;
+    border-color: $borderColVal;
+    border-style: solid;
+    width: 100%;
+    height: $height;
+    position: absolute;
+    left: 0;
+
+    @if $(side) == 'top' {
+      border-radius: 100% 100% 0 0;
+      border-width: 4px 0 0;
+      top: -$size;
+    }
+    @if $(side) == 'bottom' {
+      border-radius: 0 0 100% 100%;
+      border-width: 0 0 4px;
+      bottom: -$size;
     }
   }
 }
