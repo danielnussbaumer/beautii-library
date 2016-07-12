@@ -49,6 +49,10 @@
     background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
     opacity: $bgColOpacity;
 
+    @if $(colorName) == 'white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
+    }
+
     @if $(side) == 'top' {
       bottom: 100%;
       transform: rotate(180deg);
@@ -81,6 +85,9 @@
     }
     @if $(side) == 'bottom' {
       top: 100%;
+    }
+    @media (--tablet) {
+      padding-bottom: 0.9%;
     }
   }
 
