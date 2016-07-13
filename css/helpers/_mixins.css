@@ -55,7 +55,7 @@
 
     @if $(side) == 'top' {
       bottom: 100%;
-      transform: rotate(180deg);
+      background-position: center top;
     }
     @if $(side) == 'bottom' {
       top: 100%;
@@ -81,7 +81,7 @@
 
     @if $(side) == 'top' {
       bottom: 100%;
-      transform: rotate(180deg);
+      background-position: center top;
     }
     @if $(side) == 'bottom' {
       top: 100%;
@@ -97,6 +97,12 @@
   }
   &:after {
     background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+  }
+  @if $(side) == 'top' {
+    &:before {
+      margin-top: 0;
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -118,7 +124,7 @@
 
     @if $(side) == 'top' {
       bottom: 100%;
-      transform: rotate(180deg);
+      background-position: center top;
     }
     @if $(side) == 'bottom' {
       top: 100%;
@@ -169,7 +175,7 @@
       @if $(inside) == true {
         bottom: auto;
         top: 0;
-        transform: rotate(180deg);
+        background-position: center bottom;
       }
     }
   }
@@ -184,11 +190,10 @@
       left: 0;
       background-repeat: no-repeat;
       background-size: 115% auto;
-      background-position: center top;
+      background-position: center bottom;
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-teal.svg");
       opacity: $bgColOpacity;
       top: 100%;
-      transform: rotate(180deg);
 
       @if $(colorName) == 'navy' {
         background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-navy.svg");
@@ -200,7 +205,7 @@
       @if $(inside) == true {
         bottom: 0;
         top: auto;
-        transform: none;
+        background-position: center top;
       }
     }
   }
