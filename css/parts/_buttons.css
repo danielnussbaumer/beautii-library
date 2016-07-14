@@ -78,6 +78,25 @@ input[type="submit"] {
   align-items: center;
   padding: 10px;
 }
+.btn-icon-square {
+  border: 1px solid $teal;
+  padding: 0.6em 15px 0.5em 40px;
+  display: inline-block;
+  @mixin link-underline-style-off;
+  @mixin font-size $btnDefaultFontSize;
+  position: relative;
+  color: $teal;
+
+  svg {
+    fill: $teal;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -8px;
+  }
+}
 .lozenge {
   background: $paleBlue;
   border-radius: $btnBorderRadius;
