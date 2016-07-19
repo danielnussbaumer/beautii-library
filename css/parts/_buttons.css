@@ -37,6 +37,11 @@ input[type="submit"] {
   color: $teal;
   font-weight: $btnDefaultWeight;
 }
+.btn-outline-white {
+  @extend .btn-outline;
+  color: #fff;
+  border-color: #fff;
+}
 .btn-outline-bold {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
