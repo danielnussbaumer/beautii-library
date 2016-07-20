@@ -46,11 +46,11 @@
     background-repeat: no-repeat;
     background-size: 115% auto;
     background-position: center bottom;
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    background-image: url("${svg_path}/curve-teal.svg"); 
     opacity: $bgColOpacity;
 
     @if $(colorName) == 'white' {
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
+      background-image: url("#{$svg_path}/curve-white.svg");
     }
 
     @if $(side) == 'top' {
@@ -92,11 +92,11 @@
   }
 
   &:before {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
+    background-image: url("#{$svg_path}/curve-pale-blue.svg"); 
     margin-top: 2px;
   }
   &:after {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    background-image: url("#{$svg_path}/curve-teal.svg"); 
   }
   @if $(side) == 'top' {
     &:before {
@@ -132,11 +132,11 @@
   }
 
   &:before {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
+    background-image: url("#{$svg_path}/curve-large-pale-blue.svg");
     margin-top: 2px;
   }
   &:after {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-navy.svg");
+    background-image: url("#{$svg_path}/curve-large-navy.svg");
   }
   @if $(side) == 'top' {
     &:before {
@@ -161,15 +161,15 @@
       background-repeat: no-repeat;
       background-size: 115% auto;
       background-position: center top;
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-teal.svg");
+      background-image: url("#{$svg_path}/curve-inverted-teal.svg");
       opacity: $bgColOpacity;
       bottom: 100%;
 
       @if $(colorName) == 'navy' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-navy.svg");
+        background-image: url("#{$svg_path}/curve-inverted-navy.svg");
       }
       @if $(colorName) == 'pale-blue' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-pale-blue.svg");
+        background-image: url("#{$svg_path}/curve-inverted-pale-blue.svg");
       }
 
       @if $(inside) == true {
@@ -191,15 +191,15 @@
       background-repeat: no-repeat;
       background-size: 115% auto;
       background-position: center bottom;
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-teal.svg");
+      background-image: url("#{$svg_path}/curve-inverted-teal.svg");
       opacity: $bgColOpacity;
       top: 100%;
 
       @if $(colorName) == 'navy' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-navy.svg");
+        background-image: url("#{$svg_path}/curve-inverted-navy.svg");
       }
       @if $(colorName) == 'pale-blue' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-pale-blue.svg");
+        background-image: url("#{$svg_path}/curve-inverted-pale-blue.svg");
       }
 
       @if $(inside) == true {

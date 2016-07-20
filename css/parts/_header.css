@@ -1,0 +1,50 @@
+.page-header {
+  position: relative;
+  z-index: 4999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 14px 20px;
+  background: $teal;
+  color: #FFFFFF;
+  @mixin double-curved-edge-teal 'bottom';
+  
+  .header__logo,
+  h1 {
+    margin: 4px 0;
+    position: relative;
+    flex-grow: 1;
+
+    a {
+      display: block;
+    }
+    
+    svg {
+      display: block;
+      width: auto;
+      height: 25px;
+      
+      path, 
+      polygon,
+      rect,
+      circle {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  margin-left: 20px;
+  
+  svg {
+    display: block;
+    width: 30px;
+    height: auto;
+    
+    path {
+      fill: #fff;
+    }
+  }
+}

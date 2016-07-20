@@ -37,11 +37,6 @@ input[type="submit"] {
   color: $teal;
   font-weight: $btnDefaultWeight;
 }
-.btn-outline-white {
-  @extend .btn-outline;
-  color: #fff;
-  border-color: #fff;
-}
 .btn-outline-bold {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -131,4 +126,37 @@ input[type="submit"] {
       margin-left: 5px;
     }
   }
+}
+
+@define-extend btn-clean {
+  text-decoration: none;
+  @mixin font-size $btnDefaultFontSize;
+  font-weight: $fontWeightRegular;
+}
+@define-extend btn-bold {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: $fontWeightSemibold;
+}
+@define-extend btn-outline {
+  border: $btnBorderWidth solid $teal;
+}
+@define-extend btn-round {
+  border-radius: $btnBorderRadius;
+}
+@define-extend btn-tight {
+  padding: $btnPaddingTight;
+}
+@define-extend btn-white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-header-book {
+  @extend btn-clean;
+  @extend btn-bold;
+  @extend btn-tight;
+  @extend btn-outline;
+  @extend btn-round;
+  @extend btn-white;
 }
