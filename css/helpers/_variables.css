@@ -1,6 +1,6 @@
 /* URLs & Paths */
-/*$svg_path: '../../src/beautii-library/img/svg/optimised';*/
-$svg_path: '../assets/svgs';
+$svg_path: (../../src/beautii-library/img/svg/optimised);
+/*$svg_path: (../assets/svgs);*/
 
 /* Colours */
 $tealRgbVal: 72, 138, 149;
