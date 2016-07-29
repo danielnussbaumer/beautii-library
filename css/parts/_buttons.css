@@ -148,7 +148,7 @@ input[type="submit"] {
   @extend btn-outline;
   @extend btn-tight;
   text-align: center;
-  color: $teal;
+  color: $teal; 
 }
 
 .btn-header-book {
