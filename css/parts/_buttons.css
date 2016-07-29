@@ -26,17 +26,6 @@ input[type="submit"] {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.btn-outline {
-  @mixin font-size $btnDefaultFontSize;
-  @mixin link-underline-style-off;
-  display: inline-block;
-  text-align: center;
-  border-radius: $btnBorderRadius;
-  border: $btnBorderWidth solid $teal;
-  padding: $btnPaddingTight;
-  color: $teal;
-  font-weight: $btnDefaultWeight;
-}
 .btn-outline-bold {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -132,6 +121,7 @@ input[type="submit"] {
   text-decoration: none;
   @mixin font-size $btnDefaultFontSize;
   font-weight: $fontWeightRegular;
+  cursor: pointer;
 }
 @define-extend btn-bold {
   letter-spacing: 0.1em;
@@ -150,6 +140,15 @@ input[type="submit"] {
 @define-extend btn-white {
   color: #fff;
   border-color: #fff;
+}
+
+.btn-outline {
+  @extend btn-clean;
+  @extend btn-round;
+  @extend btn-outline;
+  @extend btn-tight;
+  text-align: center;
+  color: $teal;
 }
 
 .btn-header-book {
