@@ -170,3 +170,51 @@ input[type="submit"] {
   @extend btn-round;
   @extend btn-white;
 }
+
+.link-to-submit {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 0;
+  padding: 20px 20px 25px;
+  background: rgb(74, 138, 139);
+  color: rgb(255, 255, 255);
+  line-height: 100%;
+  vertical-align: bottom;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: min-height 0.75s, opacity 0.75s, left 0s, margin-left 0s, color 0.25s;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    height: 50px;
+    width: 150%;
+    margin-left: -75%;
+    margin-bottom: -40px;
+    background: rgb(74, 138, 139);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transition: all 0.75s;
+    z-index: -1;
+  }
+  &.link-to-submit--success {
+    min-height: 100%;
+    opacity: 0;
+    color: rgb(74, 138, 139);
+    transition: min-height 0.75s, opacity 0.25s 0.5s, left 0s 0.75s, margin-left 0s 0.75s, color 0.25s;
+    left: 100%;
+    margin-left: 0;
+
+    &:before {
+      height: 600px;
+    }
+  }
+}

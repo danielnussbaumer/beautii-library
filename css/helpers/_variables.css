@@ -42,3 +42,6 @@ $btnDefaultFontSize: 11;
 
 /* Misc */
 $textShadowValue: 1px 1px 2px rgba(0, 0, 0, 0.17);
+$headerMobileHeight: 61px;
+$headerTabletHeight: 54px;
+$tabletSemiOpacity: 0.5;
