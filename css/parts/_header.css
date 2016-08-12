@@ -416,6 +416,66 @@
     }
   }
 }
+.overlay-menu--more {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: rgba($navyBlueRgbVal, 0.95);
+  z-index: 9999;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s, height 0s 0.6s;
+
+  .menu-wrapper {
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    nav {
+      ul {
+        @mixin font-size 15;
+        text-transform: none;
+
+        li {
+          margin: 40px auto 0 auto;
+
+          a {
+            color: $white;
+
+          }
+          &.book-now-button {
+            a {
+              @extend btn-clean;
+              @extend btn-outline;
+              @extend btn-bold;
+              @extend btn-round;
+              @extend btn-round-layout;
+              color: $paleBlue;
+              border-color: $paleBlue;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    .close-button {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      svg {
+        fill: $paleBlue;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
 @media (--until-tablet) {
   .overlay-menu--more,
   .dropdown-menu {
@@ -641,59 +701,6 @@
             height: 28px;
             fill: $white;
           }
-        }
-      }
-    }
-  }
-  .overlay-menu--more {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    background: rgba($navyBlueRgbVal, 0.95);
-    z-index: 9999;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s, height 0s 0.6s;
-
-    .menu-wrapper {
-      display: flex;
-      min-height: 100%;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-      nav {
-        ul {
-          @mixin font-size 15;
-          text-transform: none;
-
-          li {
-            margin: 40px auto 0 auto;
-
-            a {
-              color: $white;
-
-              &.book-now-button {
-                color: $paleBlue;
-                border-color: $paleBlue;
-                margin: 80px auto 0;
-              }
-            }
-          }
-        }
-      }
-      .close-button {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-
-        svg {
-          fill: $paleBlue;
-          width: 30px;
-          height: 30px;
         }
       }
     }

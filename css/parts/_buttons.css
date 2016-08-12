@@ -18,13 +18,19 @@ input[type="submit"] {
   display: inline-block;
   text-align: center;
   border-radius: $btnBorderRadius;
-  border: 0;
+  border: 1px solid $teal;
   padding: $btnPaddingTight;
   color: $navyBlue;
   background: $teal;
   font-weight: $fontWeightSemibold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  transition: all 0.25s;
+
+  &:hover {
+    background: transparent;
+    color: $teal;
+  }
 }
 .btn-outline {
   @mixin font-size $btnDefaultFontSize;
@@ -36,6 +42,11 @@ input[type="submit"] {
   padding: $btnPaddingTight;
   color: $teal;
   font-weight: $btnDefaultWeight;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px $teal;
+  }
 }
 .btn-outline-bold {
   @mixin font-size $btnDefaultFontSize;
@@ -49,6 +60,11 @@ input[type="submit"] {
   font-weight: $fontWeightSemibold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px $teal;
+  }
 }
 .btn-urgent {
   @mixin font-size $btnDefaultFontSize;
@@ -62,6 +78,11 @@ input[type="submit"] {
   color: $teal;
   font-weight: $btnDefaultWeight;
   text-transform: uppercase;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px $teal;
+  }
 }
 .btn-round {
   width: 70px;
@@ -77,6 +98,11 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   padding: 10px;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px $teal;
+  }
 }
 .btn-icon-square {
   border: 1px solid $teal;
@@ -86,6 +112,11 @@ input[type="submit"] {
   @mixin font-size $btnDefaultFontSize;
   position: relative;
   color: $teal;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px $teal;
+  }
 
   svg {
     fill: $teal;
