@@ -144,6 +144,15 @@ input[type="submit"] {
 @define-extend btn-round {
   border-radius: $btnBorderRadius;
 }
+@define-extend btn-round-layout {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-width: 2px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
 @define-extend btn-tight {
   padding: $btnPaddingTight;
 }
