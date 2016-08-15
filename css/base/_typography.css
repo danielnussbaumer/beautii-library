@@ -1,5 +1,5 @@
 html {
-  font-size: 10px;
+  font-size: 11px;
 }
 body {
   font-family: $baseFont;
@@ -128,7 +128,8 @@ input[type="submit"] {
   font-weight: $fontWeightMedium;
   color: $grey;
 }
-input[type="submit"]{
+input[type="submit"],
+input[type=button] {
   &.btn-round {
     color: $white;
     border: 2px solid $white;
@@ -144,7 +145,8 @@ input[type="url"],
 input[type="tel"],
 input[type="phone"],
 input[type="search"],
-textarea {
+textarea,
+select {
   @mixin make-panel;
   width: 100%;
 }

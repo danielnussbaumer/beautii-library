@@ -1,25 +1,39 @@
 /* Colours */
 $tealRgbVal: 72, 138, 149;
+$lightTealRgbVal: 142,194,205;
 $paleBlueRgbVal: 175, 222, 230;
 $skyBlueRgbVal: 134, 206, 217;
 $sapphireRgbVal: 116, 175, 185;
+$lightBlackRgbVal: 93, 93, 93;
 $navyBlueRgbVal: 17, 27, 52;
 $darkGreyRgbVal: 45, 48, 58;
 $lightGreyRgbVal: 241, 241, 241;
+$footerGreyRgbVal: 238,238,238;
 $roseRgbVal: 217, 87, 84;
 $whiteRgbVal: 255, 255, 255;
 $greyRgbVal: 174, 174, 174;
+$orangeRgbVal: 190, 154, 56;
 
 $teal: rgb($tealRgbVal);
+$lightTeal: rgb($lightTealRgbVal);
 $paleBlue: rgb($paleBlueRgbVal);
 $skyBlue: rgb($skyBlueRgbVal);
 $sapphire: rgb($sapphireRgbVal);
+$lightBlack: rgb($lightBlackRgbVal);
 $navyBlue: rgb($navyBlueRgbVal);
 $darkGrey: rgb($darkGreyRgbVal);
 $lightGrey: rgb($lightGreyRgbVal);
+$footerGrey: rgb($footerGreyRgbVal);
 $rose: rgb($roseRgbVal);
 $white: rgb($whiteRgbVal);
 $grey: rgb($greyRgbVal);
+$orange: rgb($orangeRgbVal);
+
+$red: #ff0000;
+
+$hairCol:    rgb(147,204,204);
+$makeupCol:  rgb(145,194,204);
+$nailsCol:   rgb(166,218,227);
 
 /* Fonts */
 $baseFont: "Graphik Web", "Graphik", "Helvetica Neue", Helvetica, Arial, sans-serif;

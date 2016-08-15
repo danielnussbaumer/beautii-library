@@ -1,5 +1,6 @@
 .btn-default,
-input[type="submit"] {
+input[type="submit"],
+input[type=button] {
   border: 0;
   background: $teal;
   color: $white;

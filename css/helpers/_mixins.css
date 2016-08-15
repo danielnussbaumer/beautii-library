@@ -1,3 +1,11 @@
+@define-mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 @define-mixin font-size $fontSize {
   $rem: calc($fontSize / 10);
   font-size: calc($fontSize * 1px);
@@ -27,15 +35,15 @@
 /* A mixin so it's easier to change the round button colours */
 @define-mixin round-btn-colour $colour {
   border-color: $colour;
-   a {
-     color: $colour;
-   }
+  a {
+    color: $colour;
+  }
 }
 
 @define-mixin curved-edge $colorName, $bgColOpacity, $side {
   position: relative;
 
-  &:after {
+  &:before {
     content: '';
     display: block;
     width: 100%;
@@ -53,6 +61,14 @@
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
 
+    @if $(colorName) == 'light-grey' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-light-grey.svg");
+    }
+
+    @if $(colorName) == 'pale-blue' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
+    }
+
     @if $(side) == 'top' {
       bottom: 100%;
       background-position: center top;
@@ -63,7 +79,7 @@
   }
 }
 
-@define-mixin double-curved-edge-teal $side {
+@define-mixin double-curved-edge $colorName, $side {
   position: relative;
 
   &:before,
@@ -90,123 +106,34 @@
       padding-bottom: 0.9%;
     }
   }
-
   &:before {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
     margin-top: 2px;
+
+    @if $(colorName) == 'teal' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
+    }
+    @if $(colorName) == 'navy' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
+    }
+    @if $(colorName) == 'blue-white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
+    }
   }
   &:after {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    @if $(colorName) == 'teal' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    }
+    @if $(colorName) == 'navy' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-navy.svg");
+    }
+    @if $(colorName) == 'blue-white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
+    }
   }
   @if $(side) == 'top' {
     &:before {
       margin-top: 0;
       margin-bottom: 2px;
-    }
-  }
-}
-
-@define-mixin double-curved-edge-navy $side {
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0;
-    padding-bottom: 6%;
-    position: absolute;
-    left: 0;
-    background-repeat: no-repeat;
-    background-size: 115% auto;
-    background-position: center bottom;
-
-    @if $(side) == 'top' {
-      bottom: 100%;
-      background-position: center top;
-    }
-    @if $(side) == 'bottom' {
-      top: 100%;
-    }
-  }
-
-  &:before {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
-    margin-top: 2px;
-  }
-  &:after {
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-navy.svg");
-  }
-  @if $(side) == 'top' {
-    &:before {
-      margin-top: 0;
-      margin-bottom: 4px;
-    }
-  }
-}
-
-@define-mixin inverted-edge $colorName, $bgColOpacity, $side, $inside {
-  position: relative;
-
-  @if $(side) == 'top' {
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 0;
-      padding-bottom: 1.3%;
-      position: absolute;
-      left: 0;
-      background-repeat: no-repeat;
-      background-size: 115% auto;
-      background-position: center top;
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-teal.svg");
-      opacity: $bgColOpacity;
-      bottom: 100%;
-
-      @if $(colorName) == 'navy' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-navy.svg");
-      }
-      @if $(colorName) == 'pale-blue' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-pale-blue.svg");
-      }
-
-      @if $(inside) == true {
-        bottom: auto;
-        top: 0;
-        background-position: center bottom;
-      }
-    }
-  }
-  @if $(side) == 'bottom' {
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 0;
-      padding-bottom: 1.3%;
-      position: absolute;
-      left: 0;
-      background-repeat: no-repeat;
-      background-size: 115% auto;
-      background-position: center bottom;
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-teal.svg");
-      opacity: $bgColOpacity;
-      top: 100%;
-
-      @if $(colorName) == 'navy' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-navy.svg");
-      }
-      @if $(colorName) == 'pale-blue' {
-        background-image: url("../../src/beautii-library/img/svg/optimised/curve-inverted-pale-blue.svg");
-      }
-
-      @if $(inside) == true {
-        bottom: 0;
-        top: auto;
-        background-position: center top;
-      }
     }
   }
 }
