@@ -8,21 +8,13 @@ module.exports = function(grunt) {
                     spawn: false,
                     interrupt: true
                 }
-            }
-        },
-        modernizr: {
-            dist: {
-                "parseFiles": true,
-                "dest": "js/vendor/modernizr.js",
-                "uglify": false,
-                "options": [
-                    "setClasses"
-                ],
-                "files": {
-                    "src": [
-                        "js/**/*.js",
-                        "css/**/*.css"
-                    ]
+            },
+            scripts: {
+                files: ['js/*.js'],
+                tasks: ['uglify'],
+                options: {
+                    spawn: false,
+                    interrupt: true
                 }
             }
         },
@@ -36,8 +28,6 @@ module.exports = function(grunt) {
                 files: {
                     'script.min.js':
                         [
-                            'js/vendor/svg4everybody.js',
-                            'js/vendor/modernizr.js',
                             'js/script.js'
                         ]
                 }
@@ -104,6 +94,6 @@ module.exports = function(grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', [ 'modernizr', 'uglify', 'postcss', 'watch' ]);
+    grunt.registerTask('default', [ 'uglify', 'postcss', 'watch' ]);
     grunt.registerTask('svg', [ 'clean:preSvgOps', 'svg_sprite']);
 };
