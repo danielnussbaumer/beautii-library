@@ -1,6 +1,7 @@
 /* helpers */
 @import "helpers/custom-media-queries";
 @import "helpers/mixins";
+@import "helpers/animations";
 @import "helpers/variables";
 
 /* base */

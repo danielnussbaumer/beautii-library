@@ -23,6 +23,18 @@
         $('body').removeClass('menu-shown sub-menu-shown sub-sub-menu-shown');
         return $('.menu-wrapper .active, .dropdown-menu.active, .header__main-nav .active').removeClass('active');
       });
+      $('.menu-wrapper, .overlay-menu--more .menu-wrapper, .menu-wrapper nav').click(function(e) {
+        return e.stopPropagation();
+      });
+      $('.overlay-menu--more .menu-wrapper').click(function(e) {
+        return $('body').removeClass('menu-shown');
+      });
+      $('.overlay-menu--mobile').click(function(e) {
+        if ($(e.target) !== $('.back-button') && !$(e.target).closest('.back-button').length) {
+          e.stopPropagation();
+          return $('body').removeClass('menu-shown');
+        }
+      });
       $('.overlay-menu--mobile .menu-item-has-children > a').on('click', function(e) {
         if ($(this).closest('li').hasClass('active')) {
           $(this).closest('li').removeClass('active').siblings('.active').removeClass('active');

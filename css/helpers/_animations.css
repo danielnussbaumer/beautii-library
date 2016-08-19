@@ -1,0 +1,45 @@
+$loader-size: 32px;
+
+.form-loader,
+.form-loader__inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-loader {
+  overflow: visible;
+  padding-top: $loader-size;
+  height: 0;
+  width: $loader-size;
+}
+
+.form-loader__inner {
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 0 solid #fff;
+  border-radius: 50%;
+  animation: loader-inner 1.15s infinite ease;
+}
+
+@keyframes loader-inner {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 1;
+    width: $loader-size;
+    height: $loader-size;
+    border-width: 16px;
+  }
+
+  100% {
+    opacity: 0;
+    width: $loader-size;
+    height: $loader-size;
+    border-width: 0;
+  }
+}

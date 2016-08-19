@@ -8,10 +8,9 @@
   .header__main-nav {
     display: none;
   }
-
   .header__inner {
     background: $teal;
-    color: #fff;
+    color: #FFFFFF;
     padding: 14px 20px;
     @mixin double-curved-edge 'teal', 'bottom';
     height: $headerMobileHeight;
@@ -19,11 +18,9 @@
     &:after {
       pointer-events: none;
     }
-
     .container {
       max-width: 1920px;
     }
-
     .header__logo {
       text-indent: -9999em;
       overflow: hidden;
@@ -34,7 +31,6 @@
         fill: white;
       }
     }
-
     .header__secondary-nav {
       position: absolute;
       top: 18px;
@@ -48,11 +44,9 @@
         float: left;
         @mixin font-size 11;
       }
-
       .login-button {
         display: none;
       }
-
       .menu-toggle {
         float: left;
         margin-left: 20px;
@@ -67,71 +61,19 @@
     }
   }
 }
-
 .overlay-menu--mobile {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%;
+  height: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 6999;
-  display: flex;
-  justify-content: flex-end;
   @mixin font-size 14;
   overflow: hidden;
   transition: background 0.3s ease-out, height 0s ease-out 0.3s;
 
-  .menu-shown & {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    transition: background 0.3s ease-out;
-    &::before {
-      right: 30%;
-    }
-
-    .menu-wrapper {
-      right: 0%;
-    }
-
-    .close-button {
-      left: 13%;
-    }
-    .login-button {
-      left: 60%;
-    }
-  }
-
-  .sub-menu-shown & {
-    &::before {
-      right: 86%;
-    }
-    .menu-wrapper {
-      width: 86%;
-      display: flex;
-    }
-
-    nav.sub-menu.active {
-      display: flex;
-      width: 20%;
-    }
-
-    .login-button {
-      left: 57%;
-    }
-  }
-
-  .more-menu-shown & {
-    &::before {
-      right: 86%;
-    }
-
-    .menu-wrapper {
-      width: 86%;
-    }
-  }
-
-  &::before {
+  &:before {
     content: '';
     display: block;
     background: $navyBlue;
@@ -143,120 +85,226 @@
     right: -20%;
     transition: right 0.3s ease-out;
   }
+  nav {
+    width: 100%;
 
+    ul {
+      width: 100%;
+
+      li {
+        min-height: 60px;
+
+        &.active {
+          > a {
+            color: $grey;
+            border-bottom-color: $grey;
+          }
+        }
+        a {
+          color: #FFFFFF;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          display: inline-block;
+          transform: translateX(500px);
+          transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+          span {
+            padding-bottom: 5px;
+          }
+        }
+        &.book-now-button {
+          a {
+            @extend btn-clean;
+            @extend btn-outline;
+            @extend btn-bold;
+            @extend btn-round;
+            @extend btn-round-layout;
+            color: $paleBlue;
+          }
+        }
+        &:nth-child(2) {
+          a {
+            transition-delay: 0.05s;
+          }
+        }
+        &:nth-child(3) {
+          a {
+            transition-delay: 0.1s;
+          }
+        }
+        &:nth-child(4) {
+          a {
+            transition-delay: 0.15s;
+          }
+        }
+        &:nth-child(5) {
+          a {
+            transition-delay: 0.2s;
+          }
+        }
+        &:nth-child(6) {
+          a {
+            transition-delay: 0.25s;
+          }
+        }
+        &:nth-child(7) {
+          a {
+            transition-delay: 0.3s;
+          }
+        }
+        &:nth-child(8) {
+          a {
+            transition-delay: 0.35s;
+          }
+        }
+        &:nth-child(9) {
+          a {
+            transition-delay: 0.4s;
+          }
+        }
+        &:nth-child(10) {
+          a {
+            transition-delay: 0.45s;
+          }
+        }
+      }
+    }
+  }
   .menu-wrapper {
     background: $navyBlue;
     height: 100%;
     width: 40%;
     transition: all 0.3s ease-out;
-    position: relative;
+    position: absolute;
     right: -50%;
     padding: 120px 0 0 0;
     overflow: auto;
     overflow-x: hidden;
-  }
 
-  .menu {
-    transition: left 0.3s, transform 0.3s;
-
-    .sub-menu-shown & {
+    .menu {
       width: 50%;
       position: relative;
-    }
+      transition: left 0.3s, transform 0.3s;
 
-    .sub-sub-menu-shown & {
-      left: -50%;
-
-      .csstransforms & {
-        left: 0;
-        transform: translateX(-100%);
-      }
-
-      .menu-item-has-children.active {
+      .menu-item-has-children {
         .sub-menu {
-          li.active .sub-menu {
-            height: auto;
-          }
-        }
-      }
-    }
-
-    .menu-item-has-children {
-      &.active {
-        .sub-menu {
-          height: auto;
-          overflow: visible;
+          position: absolute;
+          top: 0;
+          left: 300%;
           width: 100%;
+          transition: left 0.5s;
+
+          li {
+            a {
+              color: $paleBlue;
+            }
+            .sub-menu {
+              left: 200%;
+              width: 90%;
+            }
+            &.active {
+              left: 100%;
+
+              > a {
+                color: $grey;
+              }
+              .sub-menu {
+                left: 100%;
+              }
+            }
+          }
         }
-      }
+        &.active {
+          > .sub-menu {
+            left: 100%;
 
-      .sub-menu {
-        display: flex;
-        height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        flex-grow: 1;
-        position: absolute;
-        top: 0;
-        left: 100%;
-
-        li {
-          &.active > a {
-            color: $grey;
-          }
-
-          a {
-            color: $paleBlue;
-          }
-
-          .sub-menu {
-            height: 0;
-            overflow: hidden;
+            >li {
+              > a {
+                transform: translateX(0);
+              }
+            }
           }
         }
       }
     }
   }
+  .more-menu {
+    background: $navyBlue;
+    position: absolute;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    transition: all 0.3s ease-out 0s;
+    padding: 120px 0 0 14%;
+    overflow: auto;
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    &.sub-menu {
+    &:before {
       display: none;
-
-      ul li a {
-        color: $paleBlue;
-      }
     }
-
-    ul li {
-      margin-bottom: 40px;
-      display: flex;
-      &.active > a {
-        color: $grey;
-        border-bottom-color: $grey;
-      }
-      &.book-now-button a {
-        color: $paleBlue;
-      }
-
-      a {
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-
-        span {
-          padding-bottom: 5px;
-        }
-      }
-
+    .more-menu-shown.sub-menu-shown & {
+      transition-delay: 0s;
+    }
+    .back-button {
+      left: 14%;
+    }
+    nav {
       ul {
-        display: none;
+        li {
+          &:nth-child(2) {
+            a {
+              transition-delay: 0.3s;
+            }
+          }
+          &:nth-child(2) {
+            a {
+              transition-delay: 0.35s;
+            }
+          }
+          &:nth-child(3) {
+            a {
+              transition-delay: 0.4s;
+            }
+          }
+          &:nth-child(4) {
+            a {
+              transition-delay: 0.45s;
+            }
+          }
+          &:nth-child(5) {
+            a {
+              transition-delay: 0.5s;
+            }
+          }
+          &:nth-child(6) {
+            a {
+              transition-delay: 0.55s;
+            }
+          }
+          &:nth-child(7) {
+            a {
+              transition-delay: 0.6s;
+            }
+          }
+          &:nth-child(8) {
+            a {
+              transition-delay: 0.65s;
+            }
+          }
+          &:nth-child(9) {
+            a {
+              transition-delay: 0.7s;
+            }
+          }
+          &:nth-child(10) {
+            a {
+              transition-delay: 0.75s;
+            }
+          }
+        }
       }
     }
   }
-
   .back-button,
   .close-button,
   .login-button {
@@ -268,89 +316,187 @@
       display: block;
     }
   }
-
   .back-button {
     position: absolute;
     left: 0;
+    transform: rotate(90deg);
+    margin-left: -10px;
+    margin-top: -7px;
   }
-
   .login-button {
     position: fixed;
     left: 100%;
-    transition: left 0.5s;
+    transition: all 0.5s;
 
     svg {
       width: 20px;
       height: 20px;
     }
   }
-
   .close-button {
     position: fixed;
     left: -100%;
-    transition: left 0.5s;
+    transition: all 0.5s;
 
     svg {
       width: 20px;
       height: 20px;
     }
   }
-
-  .back-button {
-    transform: rotate(90deg);
-    margin-left: -10px;
-  }
-
-  .more-menu {
-    background: $navyBlue;
-    position: absolute;
-    left: 100%;
+  /* First level menu shown */
+  .menu-shown & {
+    background: rgba(0, 0, 0, 0.6);
     height: 100%;
-    width: 100%;
-    top: 0;
-    transition: all 0.3s ease-out 0s;
-    padding: 120px 0 0 14%;
-    overflow: auto;
-    &::before {
-      display: none;
-    }
+    transition: background 0.3s ease-out;
 
-    .more-menu-shown & {
-      left: 0%;
+    &:before {
+      right: 30%;
+    }
+    .menu-wrapper {
+      right: 0;
+
+      .close-button {
+        left: 13%;
+      }
+      .login-button {
+        left: 60%;
+      }
+      .menu {
+        > li {
+          > a {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+  /* Second level menu shown */
+  .sub-menu-shown & {
+    &:before {
+      right: 86%;
+    }
+    .menu-wrapper {
+      width: 86%;
+
+      .login-button {
+        left: 57%;
+      }
+    }
+  }
+  /* Third level menu shown */
+  .sub-sub-menu-shown & {
+    .menu-wrapper {
+      .menu {
+        left: -50%;
+
+        .csstransforms & {
+          left: 0;
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+  /* More menu shown */
+  .more-menu-shown & {
+    &:before {
+      right: 86%;
+    }
+    .menu-wrapper {
+      width: 86%;
+    }
+    .more-menu {
+      left: 0;
       transition-delay: 0.3s;
-    }
 
-    .more-menu-shown.sub-menu-shown & {
-      transition-delay: 0s;
-    }
-
-    .back-button {
-      left: 14%;
+      .menu {
+        > li {
+          > a {
+            transform: translateX(0);
+          }
+        }
+      }
     }
   }
 }
+.overlay-menu--more {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: rgba($navyBlueRgbVal, 0.95);
+  z-index: 9999;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s, height 0s 0.6s;
 
+  .menu-wrapper {
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    nav {
+      ul {
+        @mixin font-size 15;
+        text-transform: none;
+
+        li {
+          margin: 40px auto 0 auto;
+
+          a {
+            color: $white;
+
+          }
+          &.book-now-button {
+            a {
+              @extend btn-clean;
+              @extend btn-outline;
+              @extend btn-bold;
+              @extend btn-round;
+              @extend btn-round-layout;
+              color: $paleBlue;
+              border-color: $paleBlue;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    .close-button {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      svg {
+        fill: $paleBlue;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
 @media (--until-tablet) {
   .overlay-menu--more,
   .dropdown-menu {
     display: none !important;
   }
 }
-
 @media (--tablet) {
   .header {
     position: fixed;
-
     .header__inner {
       text-align: center;
       padding: 0;
       height: $headerTabletHeight;
+
       &:after {
         content: ' ';
         display: block;
         clear:both;
       }
-
       .header__main-nav {
         display: block;
 
@@ -363,6 +509,7 @@
             font-weight: $fontWeightMedium;
             letter-spacing: 0.15em;
             margin-right: 30px;
+
             &:hover > a {
               opacity: 0.5;
             }
@@ -442,7 +589,6 @@
                 }
               }
             }
-
             a {
               line-height: 66px;
               color: $white;
@@ -486,7 +632,6 @@
                     border-radius: 50%;
                     overflow: hidden;
                   }
-
                   a {
                     display: block;
                     margin-bottom: 15px;
@@ -509,7 +654,6 @@
                       }
                     }
                   }
-
                   ul {
                     flex-direction: column;
                     width: auto;
@@ -537,7 +681,6 @@
           }
         }
       }
-
       .header__logo {
         position: absolute;
         top: 50%;
@@ -551,7 +694,6 @@
           display: block;
         }
       }
-
       .header__secondary-nav {
         float: right;
         position: static;
@@ -636,10 +778,11 @@
   .overlay-menu--mobile {
     display: none !important;
   }
-
-  .menu-shown .overlay-menu--more {
-    height: 100%;
-    opacity: 1;
-    transition: opacity 0.5s 0.1s, height 0s;
+  .menu-shown {
+    .overlay-menu--more {
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.5s 0.1s, height 0s;
+    }
   }
 }
