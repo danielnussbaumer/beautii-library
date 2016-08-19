@@ -43,10 +43,11 @@ input[type=button] {
   padding: $btnPaddingTight;
   color: $teal;
   font-weight: $btnDefaultWeight;
-  transition: box-shadow 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $teal;
+    background: $teal;
+    color: $white;
   }
 }
 .btn-outline-bold {
@@ -61,10 +62,11 @@ input[type=button] {
   font-weight: $fontWeightSemibold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: box-shadow 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $teal;
+    background: $teal;
+    color: $white;
   }
 }
 .btn-urgent {
@@ -79,10 +81,11 @@ input[type=button] {
   color: $teal;
   font-weight: $btnDefaultWeight;
   text-transform: uppercase;
-  transition: box-shadow 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $teal;
+    background: $teal;
+    color: $white;
   }
 }
 .btn-round {
@@ -99,10 +102,11 @@ input[type=button] {
   display: flex;
   align-items: center;
   padding: 10px;
-  transition: box-shadow 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $teal;
+    background: $teal;
+    color: $white;
   }
 }
 .btn-icon-square {
@@ -113,10 +117,11 @@ input[type=button] {
   @mixin font-size $btnDefaultFontSize;
   position: relative;
   color: $teal;
-  transition: box-shadow 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $teal;
+    background: $teal;
+    color: $white;
   }
 
   svg {
@@ -141,10 +146,15 @@ input[type=button] {
   text-decoration: none;
 
   span {
-    width: 33.3333%;
+    width: 45%;
+    display: inline-block;
   }
   .lozenge__title {
     text-align: left;
+    padding-right: 5%;
+  }
+  .lozenge__mid {
+    width: 10%;
   }
   .lozenge__cta {
     display: flex;
