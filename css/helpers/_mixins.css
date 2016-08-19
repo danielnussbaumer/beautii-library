@@ -50,8 +50,7 @@
   display: inline-block;
   background: $white;
   color: $teal;
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
   @mixin link-underline-style-off;
 }
 
