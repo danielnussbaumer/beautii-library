@@ -1,17 +1,17 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
-            styles: {
-                files: ['css/**/*', 'index.html', 'style-guide.css'],
-                tasks: ['postcss'],
+            scripts: {
+                files: ['coffee/*.coffee'],
+                tasks: ['coffee', 'uglify'],
                 options: {
                     spawn: false,
                     interrupt: true
                 }
             },
-            scripts: {
-                files: ['js/*.js'],
-                tasks: ['uglify'],
+            styles: {
+                files: ['css/**/*', 'index.html', 'style-guide.css'],
+                tasks: ['postcss'],
                 options: {
                     spawn: false,
                     interrupt: true
@@ -28,8 +28,15 @@ module.exports = function(grunt) {
                 files: {
                     'script.min.js':
                         [
-                            'js/script.js'
+                            'js/*.js'
                         ]
+                }
+            }
+        },
+        coffee: {
+            compile: {
+                files: {
+                    'assets/js/coffee.bundled.js': 'src/coffeescript/*.coffee'
                 }
             }
         },
@@ -94,6 +101,6 @@ module.exports = function(grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', [ 'uglify', 'postcss', 'watch' ]);
+    grunt.registerTask('default', [ 'coffee', 'uglify', 'postcss', 'watch' ]);
     grunt.registerTask('svg', [ 'clean:preSvgOps', 'svg_sprite']);
 };
