@@ -96,7 +96,6 @@ module.exports = function(grunt) {
       preSvgOps: ['img/svg/fallbacks/*.png']
     }
   });
-
   require('load-grunt-tasks')(grunt);
   grunt.registerTask('default', [ 'coffee', 'uglify', 'postcss', 'watch' ]);
   grunt.registerTask('svg', [ 'clean:preSvgOps', 'svg_sprite']);
