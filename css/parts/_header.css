@@ -10,7 +10,7 @@
   }
   .header__inner {
     background: $teal;
-    color: #FFFFFF;
+    color: $white;
     padding: 14px 20px;
     @mixin double-curved-edge 'teal', 'bottom';
     height: $headerMobileHeight;
@@ -149,11 +149,6 @@
         }
         &.book-now-button {
           a {
-            @extend btn-clean;
-            @extend btn-outline;
-            @extend btn-bold;
-            @extend btn-round;
-            @extend btn-round-layout;
             color: $white;
             border-color: $white;
           }
@@ -362,7 +357,7 @@
   .login-button {
     position: fixed;
     left: 100%;
-    transition: all 0.5s;
+    transition: none;
 
     svg {
       width: 20px;
@@ -392,17 +387,16 @@
       right: 0;
 
       .close-button {
+        opacity: 0;
         left: 13%;
+        transition: none;
       }
       .login-button {
         left: 60%;
+        transition: all 0.5s;
       }
-      .menu {
-        > li {
-          > a {
-            transform: translateX(0);
-          }
-        }
+      .menu > li > a {
+        transform: translateX(0);
       }
     }
   }
@@ -411,11 +405,18 @@
     &:before {
       right: 86%;
     }
+
     .menu-wrapper {
       width: 86%;
 
+      .close-button {
+        opacity: 1;
+        transition: opacity 0.25s ease-in 0.2s;
+      }
+
       .login-button {
         left: 57%;
+        transition: all 0.5s;
       }
     }
   }
@@ -481,26 +482,32 @@
 
         li {
           margin: 40px auto 0 auto;
+          &.book-now-button {
+            a {
+              display: block;
+              width: 120px;
+              margin: 0 auto;
+              padding: 6px 0;
+              border: 1px solid $white;
+              border-radius: 0.3em;
+              text-transform: uppercase;
+              color: $white;
+              @mixin font-size 12;
+              transition: all 0.25s ease;
+              &:hover {
+                background: $white;
+                color: $paleBlue;
+              }
+            }
+          }
 
           a {
             color: $white;
-
-          }
-          &.book-now-button {
-            a {
-              @extend btn-clean;
-              @extend btn-outline;
-              @extend btn-bold;
-              @extend btn-round;
-              @extend btn-round-layout;
-              color: $paleBlue;
-              border-color: $paleBlue;
-              margin: 0 auto;
-            }
           }
         }
       }
     }
+
     .close-button {
       position: absolute;
       top: 16px;
@@ -659,8 +666,8 @@
               top: -100%;
               left: 0;
               width: 100%;
-              background: rgb($paleBlueRgbVal);
-              @mixin double-curved-edge 'blue-white', 'bottom';
+              background: $white;
+              @mixin double-curved-edge 'white', 'bottom';
               position: fixed;
               padding-top: 100px;
               padding-bottom: 30px;

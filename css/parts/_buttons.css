@@ -38,6 +38,7 @@ input[type=button] {
   @mixin link-underline-style-off;
   display: inline-block;
   text-align: center;
+  text-transform: uppercase;
   border-radius: $btnBorderRadius;
   border: $btnBorderWidth solid $teal;
   padding: $btnPaddingTight;
@@ -247,7 +248,7 @@ input[type=button] {
     transition: all 0.75s;
     z-index: 100;
   }
-  
+
   body.loading-new-page & {
     min-height: 100%;
     opacity: 0;
@@ -260,7 +261,7 @@ input[type=button] {
       height: 600px;
     }
   }
-  
+
   span {
     z-index: 999;
     position: relative;

@@ -76,8 +76,11 @@
     background-repeat: no-repeat;
     background-size: 115% auto;
     background-position: center bottom;
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
     opacity: $bgColOpacity;
+
+    @if $(colorName) == 'teal' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    }
 
     @if $(colorName) == 'white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
@@ -137,6 +140,9 @@
     @if $(colorName) == 'navy' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
     }
+    @if $(colorName) == 'white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    }
     @if $(colorName) == 'blue-white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
@@ -147,6 +153,9 @@
     }
     @if $(colorName) == 'navy' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-navy.svg");
+    }
+    @if $(colorName) == 'white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
     @if $(colorName) == 'blue-white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
