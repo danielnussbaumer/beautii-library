@@ -590,25 +590,29 @@
               .menu-item__details {
                 max-width: 100px;
               }
+
+              ul {
+                justify-content: space-between;
+              }
             }
             &.looks-menu .sub-menu {
               .menu-item__details {
                 max-width: 250px;
               }
-            }
-            &.services-menu .sub-menu,
-            &.looks-menu .sub-menu {
+
               ul {
                 justify-content: center;
               }
-
+            }
+            &.services-menu .sub-menu,
+            &.looks-menu .sub-menu {
               li {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 25%;
                 margin: 0;
-                padding: 0 2% 0 0;
+                padding: 0 1%;
                 border: 0;
               }
 
@@ -643,7 +647,7 @@
                   width: 14px;
                   height: 14px;
                   padding: 2px;
-                  border: 1px solid teal;
+                  border: 1px solid $white;
                   border-radius: 50%;
                   transform: translateY(4px);
                 }
@@ -656,7 +660,7 @@
                   width: 6px;
                   height: 6px;
                   margin: -3px 0 0 -3px;
-                  fill: teal;
+                  fill: $white;
                 }
               }
             }
@@ -673,8 +677,8 @@
               top: -100%;
               left: 0;
               width: 100%;
-              background: $paleBlue;
-              @mixin double-curved-edge 'blue-white', 'bottom';
+              background: $teal;
+              @mixin double-curved-edge 'teal', 'bottom';
               position: fixed;
               padding-top: 100px;
               padding-bottom: 30px;
@@ -711,7 +715,7 @@
                     @mixin font-size 12;
                     font-weight: bold;
                     text-transform: uppercase;
-                    color: $teal;
+                    color: $white;
 
                     .image-wrapper {
                       display: block;
