@@ -13,6 +13,7 @@ input[type=button] {
   text-align: center;
   border-radius: $btnBorderRadius;
 }
+
 .btn-bold {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -27,12 +28,12 @@ input[type=button] {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.25s;
-
   &:hover {
     background: transparent;
     color: $teal;
   }
 }
+
 .btn-outline {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -45,12 +46,16 @@ input[type=button] {
   color: $teal;
   font-weight: $btnDefaultWeight;
   transition: background 0.25s, color 0.25s;
-
   &:hover {
     background: $teal;
     color: $white;
+
+    svg {
+      fill: $white;
+    }
   }
 }
+
 .btn-outline-bold {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -64,12 +69,16 @@ input[type=button] {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: background 0.25s, color 0.25s;
-
   &:hover {
     background: $teal;
     color: $white;
+
+    svg {
+      fill: $white;
+    }
   }
 }
+
 .btn-urgent {
   @mixin font-size $btnDefaultFontSize;
   @mixin link-underline-style-off;
@@ -83,12 +92,12 @@ input[type=button] {
   font-weight: $btnDefaultWeight;
   text-transform: uppercase;
   transition: background 0.25s, color 0.25s;
-
   &:hover {
     background: $teal;
     color: $white;
   }
 }
+
 .btn-round {
   width: 70px;
   height: 70px;
@@ -104,25 +113,28 @@ input[type=button] {
   align-items: center;
   padding: 10px;
   transition: background 0.25s, color 0.25s;
-
   &:hover {
     background: $teal;
     color: $white;
   }
 }
+
 .btn-icon-square {
   border: 1px solid $teal;
-  padding: 0.6em 15px 0.5em 40px;
+  padding: 0.6em 10px 0.5em 35px;
   display: inline-block;
   @mixin link-underline-style-off;
   @mixin font-size $btnDefaultFontSize;
   position: relative;
   color: $teal;
   transition: background 0.25s, color 0.25s;
-
   &:hover {
     background: $teal;
     color: $white;
+
+    svg {
+      fill: $white;
+    }
   }
 
   svg {
@@ -150,13 +162,16 @@ input[type=button] {
     width: 45%;
     display: inline-block;
   }
+
   .lozenge__title {
     text-align: left;
     padding-right: 5%;
   }
+
   .lozenge__mid {
     width: 10%;
   }
+
   .lozenge__cta {
     display: flex;
     align-items: center;
@@ -177,17 +192,21 @@ input[type=button] {
   font-weight: $fontWeightRegular;
   cursor: pointer;
 }
+
 @define-extend btn-bold {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: $fontWeightSemibold;
 }
+
 @define-extend btn-outline {
   border: $btnBorderWidth solid $teal;
 }
+
 @define-extend btn-round {
   border-radius: $btnBorderRadius;
 }
+
 @define-extend btn-round-layout {
   width: 70px;
   height: 70px;
@@ -197,9 +216,11 @@ input[type=button] {
   display: flex;
   align-items: center;
 }
+
 @define-extend btn-tight {
   padding: $btnPaddingTight;
 }
+
 @define-extend btn-white {
   color: #fff;
   border-color: #fff;
@@ -232,7 +253,6 @@ input[type=button] {
   text-transform: uppercase;
   text-decoration: none;
   transition: min-height 0.75s, opacity 0.75s, left 0s, margin-left 0s, color 0.25s;
-
   &:before {
     content: ' ';
     position: absolute;
@@ -256,7 +276,6 @@ input[type=button] {
     transition: min-height 0.75s, opacity 0.25s 0.5s, left 0s 0.75s, margin-left 0s 0.75s, color 0.25s;
     left: 100%;
     margin-left: 0;
-
     &:before {
       height: 600px;
     }
