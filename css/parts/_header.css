@@ -673,8 +673,8 @@
               top: -100%;
               left: 0;
               width: 100%;
-              background: $white;
-              @mixin double-curved-edge 'white', 'bottom';
+              background: $paleBlue;
+              @mixin double-curved-edge 'blue-white', 'bottom';
               position: fixed;
               padding-top: 100px;
               padding-bottom: 30px;
@@ -702,6 +702,7 @@
                     border-radius: 50%;
                     overflow: hidden;
                   }
+
                   a {
                     display: block;
                     margin-bottom: 15px;
@@ -710,7 +711,7 @@
                     @mixin font-size 12;
                     font-weight: bold;
                     text-transform: uppercase;
-                    color: teal;
+                    color: $teal;
 
                     .image-wrapper {
                       display: block;
@@ -725,6 +726,7 @@
                       }
                     }
                   }
+
                   ul {
                     flex-direction: column;
                     width: auto;
