@@ -146,7 +146,7 @@
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
     }
     @if $(colorName) == 'white' {
-      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-light-teal.svg");
     }
     @if $(colorName) == 'white-pale' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
