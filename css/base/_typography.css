@@ -1,11 +1,18 @@
+/*
+ * N.B. FONT-SIZING
+ * ----------------
+ * Base font size has been bumped up to 11px from 10px,
+ * this means that the mixin used to size fonts outputs
+ * a rem value that will equate to 1.1 times the value entered
+ */
 html {
   font-size: 11px;
 }
 body {
   font-family: $baseFont;
-  @mixin font-size 12;
+  @mixin font-size 13;
   line-height: 1.4;
-  font-weight: $fontWeightMedium;
+  font-weight: $fontWeightRegular;
   color: $grey;
 }
 h1, h2 {
@@ -172,7 +179,6 @@ nav {
 @media (--tablet) {
   h1, h2 {
     @mixin font-size 25;
-    font-weight: $fontWeightMedium;
   }
   h3 {
     @mixin font-size 17;
