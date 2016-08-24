@@ -3,16 +3,16 @@
     var init, initHeader, initialised, isTablet;
     initialised = false;
     $(document).on('turbolinks:load', function() {
-      init();
-      return initialised = true;
+      return init();
     });
     $(function() {
-      if (!initialised) {
-        return init();
-      }
+      return init();
     });
     init = function() {
-      return initHeader();
+      if (!initialised) {
+        initialised = true;
+        return initHeader();
+      }
     };
     initHeader = function() {
       $('#menu-toggle').on('click', function(e) {

@@ -1,10 +1,27 @@
 .panel {
   @mixin make-panel;
+
+  svg {
+    display: block;
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+    
+    path {
+      fill: $teal;
+    }
+  }
 }
 .panel-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 .panel-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }

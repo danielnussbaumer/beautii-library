@@ -16,6 +16,7 @@ $footerGreyRgbVal: 238,238,238;
 $roseRgbVal: 217, 87, 84;
 $whiteRgbVal: 255, 255, 255;
 $greyRgbVal: 174, 174, 174;
+$greyPTextRgbVal: 120, 120, 120;
 $orangeRgbVal: 190, 154, 56;
 
 $teal: rgb($tealRgbVal);
@@ -28,6 +29,7 @@ $navyBlue: rgb($navyBlueRgbVal);
 $darkGrey: rgb($darkGreyRgbVal);
 $lightGrey: rgb($lightGreyRgbVal);
 $footerGrey: rgb($footerGreyRgbVal);
+$PTextGrey: rgb($greyPTextRgbVal);
 $rose: rgb($roseRgbVal);
 $white: rgb($whiteRgbVal);
 $grey: rgb($greyRgbVal);

@@ -50,8 +50,7 @@
   display: inline-block;
   background: $white;
   color: $teal;
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
   @mixin link-underline-style-off;
 }
 
@@ -77,8 +76,11 @@
     background-repeat: no-repeat;
     background-size: 115% auto;
     background-position: center bottom;
-    background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
     opacity: $bgColOpacity;
+
+    @if $(colorName) == 'teal' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    }
 
     @if $(colorName) == 'white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
@@ -138,6 +140,12 @@
     @if $(colorName) == 'navy' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-pale-blue.svg");
     }
+    @if $(colorName) == 'white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-teal.svg");
+    }
+    @if $(colorName) == 'white-pale' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");
+    }
     @if $(colorName) == 'blue-white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
@@ -148,6 +156,12 @@
     }
     @if $(colorName) == 'navy' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-large-navy.svg");
+    }
+    @if $(colorName) == 'white' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
+    }
+    @if $(colorName) == 'white-pale' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
     @if $(colorName) == 'blue-white' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-pale-blue.svg");

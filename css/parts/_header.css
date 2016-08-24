@@ -10,7 +10,7 @@
   }
   .header__inner {
     background: $teal;
-    color: #FFFFFF;
+    color: $white;
     padding: 14px 20px;
     @mixin double-curved-edge 'teal', 'bottom';
     height: $headerMobileHeight;
@@ -106,11 +106,10 @@
   @mixin font-size 14;
   overflow: hidden;
   transition: background 0.3s ease-out, height 0s ease-out 0.3s;
-
   &:before {
     content: '';
     display: block;
-    background: $teal;
+    background: $white;
     border-radius: 100% 0 0 100%;
     width: 80px;
     position: absolute;
@@ -127,7 +126,6 @@
 
       li {
         min-height: 60px;
-        padding-right: 10px;
 
         &.active {
           > a {
@@ -136,7 +134,7 @@
           }
         }
         a {
-          color: $white;
+          color: $teal;
           text-decoration: none;
           border-bottom: 1px solid transparent;
           display: inline-block;
@@ -149,13 +147,8 @@
         }
         &.book-now-button {
           a {
-            @extend btn-clean;
-            @extend btn-outline;
-            @extend btn-bold;
-            @extend btn-round;
-            @extend btn-round-layout;
-            color: $white;
-            border-color: $white;
+            color: $teal;
+            border-color: $teal;
           }
         }
         &:nth-child(2) {
@@ -207,15 +200,15 @@
     }
   }
   .menu-wrapper {
-    background: $teal;
-    height: 100%;
-    width: 40%;
-    transition: all 0.3s ease-out;
     position: absolute;
     right: -50%;
+    height: 100%;
+    width: 40%;
     padding: 120px 0 0 0;
+    background: $white;
     overflow: auto;
     overflow-x: hidden;
+    transition: all 0.3s ease-out;
 
     .menu {
       width: 50%;
@@ -348,7 +341,7 @@
     outline: none;
 
     svg {
-      fill: $white;
+      fill: $teal;
       display: block;
     }
   }
@@ -362,7 +355,7 @@
   .login-button {
     position: fixed;
     left: 100%;
-    transition: all 0.5s;
+    transition: none;
 
     svg {
       width: 20px;
@@ -392,17 +385,16 @@
       right: 0;
 
       .close-button {
+        opacity: 0;
         left: 13%;
+        transition: none;
       }
       .login-button {
         left: 60%;
+        transition: all 0.5s;
       }
-      .menu {
-        > li {
-          > a {
-            transform: translateX(0);
-          }
-        }
+      .menu > li > a {
+        transform: translateX(0);
       }
     }
   }
@@ -411,11 +403,18 @@
     &:before {
       right: 86%;
     }
+
     .menu-wrapper {
       width: 86%;
 
+      .close-button {
+        opacity: 1;
+        transition: opacity 0.25s ease-in 0.2s;
+      }
+
       .login-button {
         left: 57%;
+        transition: all 0.5s;
       }
     }
   }
@@ -481,26 +480,32 @@
 
         li {
           margin: 40px auto 0 auto;
+          &.book-now-button {
+            a {
+              display: block;
+              width: 120px;
+              margin: 0 auto;
+              padding: 6px 0;
+              border: 1px solid $white;
+              border-radius: 0.3em;
+              text-transform: uppercase;
+              color: $white;
+              @mixin font-size 12;
+              transition: all 0.25s ease;
+              &:hover {
+                background: $white;
+                color: $paleBlue;
+              }
+            }
+          }
 
           a {
             color: $white;
-
-          }
-          &.book-now-button {
-            a {
-              @extend btn-clean;
-              @extend btn-outline;
-              @extend btn-bold;
-              @extend btn-round;
-              @extend btn-round-layout;
-              color: $paleBlue;
-              border-color: $paleBlue;
-              margin: 0 auto;
-            }
           }
         }
       }
     }
+
     .close-button {
       position: absolute;
       top: 16px;
@@ -581,19 +586,33 @@
                 display: none;
               }
             }
-            &.services-menu .sub-menu,
+            &.services-menu .sub-menu {
+              .menu-item__details {
+                max-width: 100px;
+              }
+
+              ul {
+                justify-content: space-between;
+              }
+            }
             &.looks-menu .sub-menu {
+              .menu-item__details {
+                max-width: 250px;
+              }
+
               ul {
                 justify-content: center;
               }
-
+            }
+            &.services-menu .sub-menu,
+            &.looks-menu .sub-menu {
               li {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 25%;
                 margin: 0;
-                padding: 0 2% 0 0;
+                padding: 0 1%;
                 border: 0;
               }
 
@@ -601,7 +620,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                max-width: 250px;
               }
 
               a {
@@ -629,7 +647,7 @@
                   width: 14px;
                   height: 14px;
                   padding: 2px;
-                  border: 1px solid teal;
+                  border: 1px solid $white;
                   border-radius: 50%;
                   transform: translateY(4px);
                 }
@@ -642,7 +660,7 @@
                   width: 6px;
                   height: 6px;
                   margin: -3px 0 0 -3px;
-                  fill: teal;
+                  fill: $white;
                 }
               }
             }
@@ -659,8 +677,8 @@
               top: -100%;
               left: 0;
               width: 100%;
-              background: rgb($paleBlueRgbVal);
-              @mixin double-curved-edge 'blue-white', 'bottom';
+              background: $teal;
+              @mixin double-curved-edge 'teal', 'bottom';
               position: fixed;
               padding-top: 100px;
               padding-bottom: 30px;
@@ -688,6 +706,7 @@
                     border-radius: 50%;
                     overflow: hidden;
                   }
+
                   a {
                     display: block;
                     margin-bottom: 15px;
@@ -696,7 +715,7 @@
                     @mixin font-size 12;
                     font-weight: bold;
                     text-transform: uppercase;
-                    color: teal;
+                    color: $white;
 
                     .image-wrapper {
                       display: block;
@@ -705,11 +724,13 @@
 
                       img {
                         width: 100%;
+                        height: auto;
                         border-radius: 50%;
                         display: block;
                       }
                     }
                   }
+
                   ul {
                     flex-direction: column;
                     width: auto;
