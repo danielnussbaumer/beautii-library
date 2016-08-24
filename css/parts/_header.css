@@ -80,7 +80,7 @@
           }
         }
 
-        body.beautii-logged-in {
+        body.beautii-logged-in & {
           svg {
             display: block;
             &.beautii-logged-out {
@@ -384,7 +384,7 @@
       }
     }
 
-    body.beautii-logged-in {
+    body.beautii-logged-in & {
       svg {
         display: block;
         &.beautii-logged-out {
