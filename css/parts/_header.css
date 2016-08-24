@@ -72,6 +72,22 @@
           opacity: 1;
           transform: scale(1.1);
         }
+
+        svg {
+          display: none;
+          &.beautii-logged-out {
+            display: block;
+          }
+        }
+
+        body.beautii-logged-in {
+          svg {
+            display: block;
+            &.beautii-logged-out {
+              display: none;
+            }
+          }
+        }
       }
       .menu-toggle {
         float: left;
@@ -360,8 +376,21 @@
     transition: none;
 
     svg {
+      display: none;
       width: 20px;
       height: 20px;
+      &.beautii-logged-out {
+        display: block;
+      }
+    }
+
+    body.beautii-logged-in {
+      svg {
+        display: block;
+        &.beautii-logged-out {
+          display: none;
+        }
+      }
     }
   }
   .close-button {
