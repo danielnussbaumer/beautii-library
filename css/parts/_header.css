@@ -214,6 +214,25 @@
             transition-delay: 0.45s;
           }
         }
+        &.book-now-button {
+          a {
+            padding: 8px 15px;
+            line-height: 1;
+            border: 1px solid $teal;
+            border-radius: 0.3em;
+            text-transform: uppercase;
+            color: $teal;
+            @mixin font-size 12;
+            transition: all 0.25s ease;
+            text-align: center;
+            white-space: nowrap;
+
+            &:hover {
+              background: $teal;
+              color: $teal;
+            }
+          }
+        }
       }
     }
   }
@@ -229,10 +248,10 @@
     transition: all 0.3s ease-out;
 
     .menu {
-      width: 50%;
+      width: 100%;
       position: relative;
       left: 0;
-      transition: left 0.3s, transform 0.3s;
+      transition: left 0.3s, transform 0.3s, width 0.3s 0.3s;
 
       .menu-item-has-children {
         .sub-menu {
@@ -278,7 +297,7 @@
     }
   }
   .more-menu {
-    background: $teal;
+    background: $white;
     position: absolute;
     left: 100%;
     height: 100%;
@@ -440,11 +459,14 @@
     .menu-wrapper {
       width: 86%;
 
+      .menu {
+        width: 50%;
+        transition: left 0.3s, transform 0.3s, width 0.3s;
+      }
       .close-button {
         opacity: 1;
         transition: opacity 0.25s ease-in 0.2s;
       }
-
       .login-button {
         left: 57%;
         transition: all 0.5s;
