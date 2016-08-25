@@ -663,7 +663,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 25%;
+                width: 50%;
                 margin: 0;
                 padding: 0 1%;
                 border: 0;
@@ -918,12 +918,28 @@
 }
 
 @media (--desktop) {
-  .header .header__inner .header__secondary-nav {
-    .call-now-button {
-      display: none;
+  .header {
+    .header__inner {
+      .header__main-nav {
+        ul {
+          li {
+            &.services-menu .sub-menu,
+            &.looks-menu .sub-menu {
+              li {
+                width: 25%;
+              }
+            }
+          }
+        }
+      }
+      .header__secondary-nav {
+        .call-now-button {
+          display: none;
 
-      &.call-now-button--desktop {
-        display: block;
+          &.call-now-button--desktop {
+            display: block;
+          }
+        }
       }
     }
   }

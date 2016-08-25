@@ -122,7 +122,8 @@ input[type=button] {
 .btn-icon-square {
   border: 1px solid $teal;
   padding: 0.6em 10px 0.5em 35px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   @mixin link-underline-style-off;
   @mixin font-size $btnDefaultFontSize;
   position: relative;
