@@ -541,21 +541,23 @@
               width: 120px;
               margin: 0 auto;
               padding: 6px 0;
-              border: 1px solid $white;
+              border: 1px solid $teal;
               border-radius: 0.3em;
               text-transform: uppercase;
-              color: $white;
+              color: $teal;
               @mixin font-size 12;
               transition: all 0.25s ease;
+              outline: none;
+
               &:hover {
-                background: $white;
-                color: $paleBlue;
+                background: $teal;
+                color: $white;
               }
             }
           }
 
           a {
-            color: $white;
+            color: $teal;
           }
         }
       }
@@ -859,7 +861,7 @@
     width: 100%;
     height: 0;
     overflow: hidden;
-    background: rgba($tealRgbVal, 0.95);
+    background: rgba($whiteRgbVal, 0.95);
     z-index: 9999;
     text-align: center;
     opacity: 0;
@@ -882,11 +884,11 @@
           border-color: $white;
 
           a {
-            color: $white;
+            color: $teal;
 
             &.book-now-button {
-              color: $paleBlue;
-              border-color: $paleBlue;
+              color: $teal;
+              border-color: $teal;
               margin: 80px auto 0;
             }
           }
@@ -900,7 +902,7 @@
         cursor: pointer;
 
         svg {
-          fill: $white;
+          fill: $teal;
           width: 30px;
           height: 30px;
         }
