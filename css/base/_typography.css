@@ -129,11 +129,15 @@ input[type="search"],
 textarea,
 select,
 input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-family: $baseFont;
   @mixin font-size 12;
   line-height: 1.4;
   font-weight: $fontWeightMedium;
   color: $grey;
+  outline: none;
 }
 input[type="submit"],
 input[type=button] {
