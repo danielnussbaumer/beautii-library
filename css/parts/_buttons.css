@@ -153,30 +153,18 @@ input[type=button] {
   border-radius: $btnBorderRadius;
   color: $teal;
   text-transform: uppercase;
-  padding: 0.3em 0.8em;
+  padding: 0.3em 70px 0.2em 0.8em;
   font-weight: $fontWeightSemibold;
-  display: flex;
-  justify-content: space-between;
   text-decoration: none;
-
-  span {
-    width: 45%;
-    display: inline-block;
-  }
-
-  .lozenge__title {
-    text-align: left;
-    padding-right: 5%;
-  }
-
-  .lozenge__mid {
-    width: 10%;
-  }
+  position: relative;
+  text-align: left;
 
   .lozenge__cta {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    position: absolute;
+    right: 0.3em;
+    top: 50%;
+    margin-top: -10px;
+    font-weight: $fontWeightRegular;
 
     svg {
       fill: $teal;
