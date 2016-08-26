@@ -13,7 +13,7 @@ body {
   @mixin font-size 13;
   line-height: 1.4;
   font-weight: $fontWeightRegular;
-  color: $grey;
+  color: $PTextGrey;
 }
 h1, h2 {
   @mixin font-size 15;

@@ -55,6 +55,9 @@ do ($ = jQuery, window) ->
               $(document).off 'mouseup'
       e.preventDefault()
 
+    $('#menu-main-menu > .menu-item-has-children > a').on 'click', (e) ->
+      e.preventDefault();
+
     $('.more-menu-button').on 'click', (e) ->
       $('body').addClass('more-menu-shown')
       e.preventDefault()
