@@ -1,4 +1,5 @@
 @custom-media --until-tablet (width < 720px);
 @custom-media --tablet (width >= 720px);
+@custom-media --tablet-only (width >= 720px) and (width < 1060px);
 @custom-media --desktop (width >= 1060px);
 @custom-media --until-desktop (width < 1060px);
