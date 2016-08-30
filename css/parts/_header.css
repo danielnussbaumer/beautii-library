@@ -167,6 +167,15 @@
           position: relative;
           transform: translateX(500px);
           transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+          &:before {
+            content: ' ';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+          }
         }
         &.book-now-button {
           a {
