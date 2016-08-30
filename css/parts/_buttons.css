@@ -225,11 +225,14 @@ input[type=button] {
 }
 
 .link-to-submit {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   transition: left 0s;
+  
+  @media (--tablet) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
   
   div {
     margin-top: 11px;

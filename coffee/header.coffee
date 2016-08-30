@@ -1,17 +1,14 @@
 do ($ = jQuery, window) ->
 
-  initialised = false
-
-  $(document).on 'turbolinks:load', ->
-    init()
-
-  $ ->
-    init()
+  if Turbolinks.supported
+    $(document).on 'turbolinks:load', ->
+      init()
+  else
+    $ ->
+      init()
 
   init = ->
-    if !initialised
-      initialised = true
-      initHeader()
+    initHeader()
 
   initHeader = ->
     $('#menu-toggle').on 'click', (e) ->
