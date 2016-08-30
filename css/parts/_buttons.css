@@ -233,12 +233,12 @@ input[type=button] {
   
   div {
     margin-top: 11px;
-    background: rgb(74, 138, 139);
+    background: $teal;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 20px 20px 25px;
-    color: rgb(255, 255, 255);
+    color: $white;
     position: relative;
     transition: min-height 0.75s, opacity 0.75s, margin-left 0s, color 0.25s;
     min-height: 0;
@@ -258,7 +258,7 @@ input[type=button] {
       width: 150%;
       margin-left: -75%;
       margin-bottom: -40px;
-      background: rgb(74, 138, 139);
+      background: $teal;
       border-top-left-radius: 100%;
       border-top-right-radius: 100%;
       transition: all 0.75s;
@@ -274,7 +274,7 @@ input[type=button] {
     div {
       min-height: 100%;
       opacity: 0;
-      color: rgb(74, 138, 139);
+      color: $teal;
       transition: min-height 0.75s, opacity 0.25s 0.5s, margin-left 0s 0.75s, color 0.25s;
       margin-left: 0;
       &:before {
