@@ -1,18 +1,17 @@
 (function() {
   (function($, window) {
-    var init, initHeader, initialised, isTablet;
-    initialised = false;
-    $(document).on('turbolinks:load', function() {
-      return init();
-    });
-    $(function() {
-      return init();
-    });
+    var init, initHeader, isTablet;
+    if (Turbolinks.supported) {
+      $(document).on('turbolinks:load', function() {
+        return init();
+      });
+    } else {
+      $(function() {
+        return init();
+      });
+    }
     init = function() {
-      if (!initialised) {
-        initialised = true;
-        return initHeader();
-      }
+      return initHeader();
     };
     initHeader = function() {
       $('#menu-toggle').on('click', function(e) {
