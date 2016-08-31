@@ -1,7 +1,7 @@
 (function() {
   (function($, window) {
     var init, initHeader, isTablet;
-    if (Turbolinks.supported) {
+    if ((typeof Turbolinks !== "undefined" && Turbolinks !== null) && Turbolinks.supported) {
       $(document).on('turbolinks:load', function() {
         return init();
       });

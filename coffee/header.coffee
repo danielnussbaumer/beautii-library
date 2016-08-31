@@ -1,6 +1,6 @@
 do ($ = jQuery, window) ->
 
-  if Turbolinks.supported
+  if Turbolinks? and Turbolinks.supported
     $(document).on 'turbolinks:load', ->
       init()
   else
