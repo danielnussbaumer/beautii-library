@@ -3,3 +3,4 @@
 @custom-media --tablet-only (width >= 720px) and (width < 1060px);
 @custom-media --desktop (width >= 1060px);
 @custom-media --until-desktop (width < 1060px);
+@custom-media --large-desktop (width >= 1400px);
