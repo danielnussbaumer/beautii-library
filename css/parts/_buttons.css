@@ -123,12 +123,15 @@ input[type=button] {
   border: 1px solid $teal;
   padding: 0.6em 10px 0.5em 35px;
   display: flex;
+  justify-content: center;
   align-items: center;
   @mixin link-underline-style-off;
   @mixin font-size $btnDefaultFontSize;
   position: relative;
   color: $teal;
   transition: background 0.25s, color 0.25s;
+  min-width: 140px;
+
   &:hover {
     background: $teal;
     color: $white;
