@@ -227,6 +227,7 @@ input[type=button] {
   @extend btn-white;
 }
 
+.page-footer,
 .link-to-submit {
   width: 100%;
   
@@ -292,6 +293,7 @@ input[type=button] {
     }
   }
 
+  a,
   span {
     z-index: 999;
     position: relative;
