@@ -227,6 +227,7 @@ input[type=button] {
   @extend btn-white;
 }
 
+.page-footer,
 .link-to-submit {
   width: 100%;
   
@@ -237,7 +238,7 @@ input[type=button] {
     transition: left 0s;
   }
   
-  div {
+  .wrapper {
     margin-top: 11px;
     background: $teal;
     display: flex;
@@ -270,6 +271,11 @@ input[type=button] {
       transition: all 0.75s;
       z-index: 100; 
     }
+    
+    div {
+      position: relative;
+      z-index: 999;
+    }
   }
 
   body.loading-new-page & {
@@ -280,7 +286,7 @@ input[type=button] {
       transition: left 0s 0.75s;  
     }
     
-    div {
+    .wrapper {
       min-height: 100%;
       opacity: 0;
       color: $teal;
@@ -292,8 +298,9 @@ input[type=button] {
     }
   }
 
+  a,
   span {
-    z-index: 999;
     position: relative;
+    z-index: 999;
   }
 }
