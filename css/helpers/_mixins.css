@@ -34,6 +34,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* mixins so we can easily change the text underline style (e.g. using background images) later if we want */
