@@ -232,7 +232,7 @@ input[type=button] {
   width: 100%;
   
   @media (--tablet) {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     transition: left 0s;
