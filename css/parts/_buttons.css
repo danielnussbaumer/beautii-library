@@ -293,7 +293,7 @@ input[type=button] {
       transition: min-height 0.75s, opacity 0.25s 0.5s, margin-left 0s 0.75s, color 0.25s;
       margin-left: 0;
       &:before {
-        height: 600px;
+        height: 900px; 
       }
     }
   }
