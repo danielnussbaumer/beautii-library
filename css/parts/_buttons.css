@@ -52,6 +52,7 @@ input[type=button] {
 
     svg {
       fill: $white;
+      transition: fill 0.25s;
     }
   }
 }
@@ -75,6 +76,7 @@ input[type=button] {
 
     svg {
       fill: $white;
+      transition: fill 0.25s;
     }
   }
 }
@@ -149,6 +151,7 @@ input[type=button] {
     top: 50%;
     left: 10px;
     margin-top: -8px;
+    transition: fill 0.25s;
   }
 }
 .lozenge {
@@ -230,14 +233,14 @@ input[type=button] {
 .page-footer,
 .link-to-submit {
   width: 100%;
-  
+
   @media (--tablet) {
     position: fixed;
     bottom: 0;
     left: 0;
     transition: left 0s;
   }
-  
+
   .wrapper {
     margin-top: 11px;
     background: $teal;
@@ -255,7 +258,7 @@ input[type=button] {
     text-transform: uppercase;
     text-decoration: none;
     width: 100%;
-    
+
     &:before {
       content: ' ';
       position: absolute;
@@ -269,9 +272,9 @@ input[type=button] {
       border-top-left-radius: 100%;
       border-top-right-radius: 100%;
       transition: all 0.75s;
-      z-index: 100; 
+      z-index: 100;
     }
-    
+
     div {
       position: relative;
       z-index: 999;
@@ -279,13 +282,13 @@ input[type=button] {
   }
 
   body.loading-new-page & {
-    overflow: visible; 
-    
+    overflow: visible;
+
     @media (--tablet) {
       left: 100%;
-      transition: left 0s 0.75s;  
+      transition: left 0s 0.75s;
     }
-    
+
     .wrapper {
       min-height: 100%;
       opacity: 0;
@@ -293,7 +296,7 @@ input[type=button] {
       transition: min-height 0.75s, opacity 0.25s 0.5s, margin-left 0s 0.75s, color 0.25s;
       margin-left: 0;
       &:before {
-        height: 900px; 
+        height: 900px;
       }
     }
   }
