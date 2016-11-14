@@ -8,6 +8,7 @@
   .header__main-nav {
     display: none;
   }
+
   .header__inner {
     background: $teal;
     color: $white;
@@ -18,11 +19,13 @@
     &:after {
       pointer-events: none;
     }
+
     .container {
       max-width: 1920px;
       margin-left: auto;
       margin-right: auto;
     }
+
     .header__logo {
       text-indent: -9999em;
       overflow: hidden;
@@ -33,6 +36,7 @@
         fill: white;
       }
     }
+
     .header__secondary-nav {
       position: absolute;
       top: 18px;
@@ -46,6 +50,7 @@
           height: 25px;
         }
       }
+
       .call-now-button,
       .book-now-button {
         margin-left: 20px;
@@ -62,11 +67,16 @@
           transform: scale(1.05);
         }
       }
+
       .call-now-button--desktop {
         display: none;
       }
+
       .login-button {
-        display: none !important; /* TODO: Reinstate when it's ready */
+        display: block;
+        float: left;
+        margin-left: 20px;
+        margin-top: -2px;
         transition: all 0.25s;
         -webkit-backface-visibility: hidden;
         opacity: 0.85;
@@ -77,6 +87,9 @@
 
         svg {
           display: none;
+          width: 28px;
+          height: 28px;
+          fill: $white;
           &.beautii-logged-out {
             display: block;
           }
@@ -91,6 +104,7 @@
           }
         }
       }
+
       .menu-toggle {
         float: left;
         margin-left: 20px;
@@ -113,6 +127,7 @@
     }
   }
 }
+
 .overlay-menu--mobile {
   position: absolute;
   top: 0;
@@ -145,7 +160,6 @@
 
       li {
         min-height: 60px;
-
         &.active {
           > a {
             color: $grey;
@@ -164,26 +178,6 @@
           }
         }
 
-        a {
-          color: $teal;
-          text-decoration: none;
-          display: inline-block;
-          position: relative;
-          transform: translateX(500px);
-          transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-
-          &:before {
-            content: ' ';
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            bottom: -5px;
-            left: -5px;
-          }
-          span {
-            position: relative;
-          }
-        }
         &.book-now-button {
           a {
             color: $teal;
@@ -247,11 +241,31 @@
             transition: all 0.25s ease;
             text-align: center;
             white-space: nowrap;
-
             &:hover {
               background: $teal;
               color: $teal;
             }
+          }
+        }
+
+        a {
+          color: $teal;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          transform: translateX(500px);
+          transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+          &:before {
+            content: ' ';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+          }
+
+          span {
+            position: relative;
           }
         }
       }
@@ -276,6 +290,16 @@
       transition: left 0.3s, transform 0.3s, width 0.3s 0.3s;
 
       .menu-item-has-children {
+        &.active {
+          > .sub-menu {
+            left: 100%;
+
+            > li > a {
+              transform: translateX(0);
+            }
+          }
+        }
+
         .sub-menu {
           position: absolute;
           top: 0;
@@ -284,14 +308,6 @@
           transition: left 0.5s;
 
           li {
-            a {
-              color: $teal;
-              margin-right: 10px;
-            }
-            .sub-menu {
-              left: 200%;
-              width: 90%;
-            }
             &.active {
               left: 100%;
 
@@ -302,16 +318,15 @@
                 left: 100%;
               }
             }
-          }
-        }
-        &.active {
-          > .sub-menu {
-            left: 100%;
 
-            >li {
-              > a {
-                transform: translateX(0);
-              }
+            a {
+              color: $teal;
+              margin-right: 10px;
+            }
+
+            .sub-menu {
+              left: 200%;
+              width: 90%;
             }
           }
         }
@@ -332,9 +347,11 @@
     &:before {
       display: none;
     }
+
     .more-menu-shown.sub-menu-shown & {
       transition-delay: 0s;
     }
+
     .back-button {
       left: 14%;
     }
@@ -396,6 +413,7 @@
       }
     }
   }
+
   .back-button,
   .close-button,
   .login-button {
@@ -407,6 +425,7 @@
       display: block;
     }
   }
+
   .back-button {
     position: absolute;
     left: 0;
@@ -419,6 +438,7 @@
       height: 30px;
     }
   }
+
   .login-button {
     position: fixed;
     left: 100%;
@@ -443,6 +463,7 @@
       }
     }
   }
+
   .close-button {
     position: fixed;
     left: -100%;
@@ -453,15 +474,16 @@
       height: 20px;
     }
   }
+
   /* First level menu shown */
   .menu-shown & {
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
     transition: background 0.3s ease-out;
-
     &:before {
-      right: 30%;
+      right: 35%;
     }
+
     .menu-wrapper {
       right: 0;
 
@@ -470,15 +492,18 @@
         left: 13%;
         transition: none;
       }
+
       .login-button {
         left: 60%;
         transition: all 0.5s;
       }
+
       .menu > li > a {
         transform: translateX(0);
       }
     }
   }
+
   /* Second level menu shown */
   .sub-menu-shown & {
     &:before {
@@ -492,16 +517,19 @@
         width: 50%;
         transition: left 0.3s, transform 0.3s, width 0.3s;
       }
+
       .close-button {
         opacity: 1;
         transition: opacity 0.25s ease-in 0.2s;
       }
+
       .login-button {
         left: 57%;
         transition: all 0.5s;
       }
     }
   }
+
   /* Third level menu shown */
   .sub-sub-menu-shown & {
     .menu-wrapper {
@@ -515,14 +543,17 @@
       }
     }
   }
+
   /* More menu shown */
   .more-menu-shown & {
     &:before {
       right: 86%;
     }
+
     .menu-wrapper {
       width: 86%;
     }
+
     .more-menu {
       left: 0;
       transition-delay: 0.3s;
@@ -577,7 +608,6 @@
               @mixin font-size 12;
               transition: all 0.25s ease;
               outline: none;
-
               &:hover {
                 background: $teal;
                 color: $white;
@@ -605,12 +635,14 @@
     }
   }
 }
+
 @media (--until-tablet) {
   .overlay-menu--more,
   .dropdown-menu {
     display: none !important;
   }
 }
+
 @media (--desktop-header) {
   .header {
     position: fixed;
@@ -618,24 +650,25 @@
       text-align: center;
       padding: 0;
       height: $headerTabletHeight;
-
       &:after {
         content: ' ';
         display: block;
         clear:both;
       }
+
       .container {
         padding: 0 30px;
       }
+
       .header__secondary-nav {
         .call-now-button {
           display: block;
-
           &.call-now-button--desktop {
             display: none;
           }
         }
       }
+
       .header__main-nav {
         display: block;
 
@@ -649,6 +682,7 @@
             opacity: 1;
           }
         }
+
         ul {
           float: left;
 
@@ -658,7 +692,6 @@
             font-weight: $fontWeightMedium;
             letter-spacing: 0.15em;
             margin-right: 30px;
-
             &:hover .sub-menu {
               top: 0;
               transition: top 0.5s;
@@ -750,6 +783,7 @@
                 }
               }
             }
+
             a {
               line-height: 66px;
               color: $white;
@@ -844,6 +878,7 @@
           }
         }
       }
+
       .header__logo {
         position: absolute;
         top: 50%;
@@ -861,19 +896,6 @@
         float: right;
         position: static;
         margin-top: 18px;
-
-        .login-button {
-          display: block;
-          float: left;
-          margin-left: 20px;
-          margin-top: -2px;
-
-          svg {
-            width: 28px;
-            height: 28px;
-            fill: $white;
-          }
-        }
       }
     }
   }
@@ -916,7 +938,6 @@
 
           a {
             color: $teal;
-
             &.book-now-button {
               color: $teal;
               border-color: $teal;
@@ -981,7 +1002,6 @@
       .header__secondary-nav {
         .call-now-button {
           display: none;
-
           &.call-now-button--desktop {
             display: block;
           }
@@ -990,6 +1010,7 @@
     }
   }
 }
+
 @media (--large-desktop) {
   .header {
     .header__inner {
