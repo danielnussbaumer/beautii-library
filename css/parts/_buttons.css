@@ -307,3 +307,7 @@ input[type=button] {
     z-index: 999;
   }
 }
+
+.link-to-submit {
+  cursor: pointer; 
+}
