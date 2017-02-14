@@ -133,6 +133,10 @@
     @if $(side) == 'bottom' {
       top: 100%;
     }
+    @if $(side) == 'right' {
+      right: 100%;
+      height: 100%;
+    }
     @media (--tablet) {
       padding-bottom: 0.9%;
     }

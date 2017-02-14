@@ -724,7 +724,8 @@
               }
             }
             &.services-menu .sub-menu,
-            &.looks-menu .sub-menu {
+            &.looks-menu .sub-menu,
+            &.image-menu .sub-menu {
               li {
                 display: flex;
                 align-items: center;
@@ -971,7 +972,7 @@
     opacity: 1;
     transition: opacity 0.5s 0.1s, height 0s;
   }
-} 
+}
 
 @media (--desktop) {
   .header {

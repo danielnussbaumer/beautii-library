@@ -60,9 +60,6 @@
         }
         return e.preventDefault();
       });
-      $('#menu-main-menu > .menu-item-has-children > a').on('click', function(e) {
-        return e.preventDefault();
-      });
       $('.more-menu-button').on('click', function(e) {
         $('body').addClass('more-menu-shown');
         return e.preventDefault();
