@@ -714,7 +714,8 @@
                 justify-content: space-between;
               }
             }
-            &.looks-menu .sub-menu {
+            &.looks-menu .sub-menu,
+            &.image-menu .sub-menu {
               .menu-item__details {
                 max-width: 250px;
               }

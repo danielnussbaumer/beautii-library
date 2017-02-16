@@ -88,6 +88,11 @@
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white.svg");
     }
 
+    @if $(colorName) == 'white-vertical' {
+      background-image: url("../../src/beautii-library/img/svg/optimised/curve-white-vertical.svg");
+      background-size: cover;
+    }
+
     @if $(colorName) == 'light-grey' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-light-grey.svg");
     }
@@ -104,8 +109,15 @@
       bottom: 100%;
       background-position: center top;
     }
+
     @if $(side) == 'bottom' {
       top: 100%;
+    }
+
+    @if $(side) == 'right' {
+      top: 0; left: initial; right: -19px;
+      width: 27px;
+      height: 100%;
     }
   }
 }
@@ -130,13 +142,11 @@
       bottom: 100%;
       background-position: center top;
     }
+
     @if $(side) == 'bottom' {
       top: 100%;
     }
-    @if $(side) == 'right' {
-      right: 100%;
-      height: 100%;
-    }
+
     @media (--tablet) {
       padding-bottom: 0.9%;
     }
