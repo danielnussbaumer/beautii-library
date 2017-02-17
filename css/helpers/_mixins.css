@@ -91,6 +91,7 @@
     @if $(colorName) == 'white-vertical' {
       background-image: url("../../src/beautii-library/img/svg/optimised/curve-white-vertical.svg");
       background-size: contain;
+      padding-bottom: 0;
     }
 
     @if $(colorName) == 'light-grey' {
@@ -115,7 +116,7 @@
     }
 
     @if $(side) == 'right' {
-      top: 0; left: initial; right: -70px;
+      left: initial; bottom: -5px; right: -70px;
       width: 100px;
       height: 100%;
     }
