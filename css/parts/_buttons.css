@@ -9,7 +9,6 @@ input[type=button] {
   padding: $btnPaddingLarge;
   @mixin link-underline-style-off;
   cursor: pointer;
-  display: inline-block;
   text-align: center;
   border-radius: $btnBorderRadius;
 }
